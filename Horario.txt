@@ -1,0 +1,18 @@
+    LUNES        Martes        Miercoles         Jueves              Viernes         
+    Algo         DWEC         En servidor         DWEC
+    Algo         DWEC         En servidor         DWEC
+    DWES   Programacion          DWEC     Base de Datos       Programacion
+
+    DWES   Sistemas Inf          DWEC    Base de Datos       Programacion   
+ Sistemas Inf   Sistemas Inf      FOL          Sistemas Inf      Lenguaje de Marc
+ Sistemas Inf       FOL           FOL          Sistemas Inf      Lenguaje de Marc   
+
+
+DWEC -> Jose
+DWES -> Belen
+DJW -> Paqui
+DAW -> Alicia
+EIE -> Jose Manuel
+
+folcontic.wixsite.com/flippedeie/1-1-iniciativa-empresa
+
