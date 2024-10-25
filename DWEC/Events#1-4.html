@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body onload="createCanvas()">
+
+    <table id="canvas"></table>
+
+    <script>
+        function createCanvas(){
+            const table = document.getElementById('canvas');
+            for(let i = 0; i < 100; i++){
+                const row = document.createElement('tr');
+                for(let j = 0; i < 100; j++){
+                    const cell = document.createElement('td');
+                    cell.addEventListener('mousemove', function(event) {
+                        colorCell(event, cell);
+                    });
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+        }
+
+        function colorCell(event, cell){
+            if(envent.ctrlKey){
+                cell.style.backgroundColor = "red";
+            }else if (event.shiftKey){
+                cell.style.backgroundColor = "blue";
+            }else{
+                cell.style.backgroundColor = " ";
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1>Mueve el ratón por la pantalla</h1>
+    <div id="posicion">X: 0, Y: 0</div>
+
+    <script>
+        document.addEventListener('mousemove', function(event) {
+            const x = event.clientX;
+            const y = event.clientY;
+            document.getElementById('posicion').textContent = `X: ${x}, Y: ${y}`;
+        });
+    </script>
+</body>
+</html>
