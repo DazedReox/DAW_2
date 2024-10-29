@@ -1,0 +1,31 @@
+form {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+input:required {
+    border: 1px solid red;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}

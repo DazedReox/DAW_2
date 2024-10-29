@@ -1,0 +1,11 @@
+.tabla-simplificada {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.tabla-simplificada th, .tabla-simplificada td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid gray;
+}

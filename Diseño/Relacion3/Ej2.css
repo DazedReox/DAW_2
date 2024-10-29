@@ -1,0 +1,22 @@
+.tabla-ancha {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-ancha th, .tabla-ancha td {
+    border: 3px solid white;
+    padding: 10px;
+}
+
+.tabla-ancha th {
+    background-color: #007acc;
+    color: white;
+}
+
+tr.par {
+    background-color: lightblue;
+}
+
+tr.impar {
+    background-color: lightgray;
+}

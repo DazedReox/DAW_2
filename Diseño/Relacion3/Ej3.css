@@ -1,0 +1,26 @@
+.tabla-hover tr:hover {
+    background-color: yellow;
+}
+
+.tabla-hover {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-hover th, .tabla-hover td {
+    border: 3px solid white;
+    padding: 10px;
+}
+
+.tabla-hover th {
+    background-color: #007acc;
+    color: white;
+}
+
+tr.par {
+    background-color: lightblue;
+}
+
+tr.impar {
+    background-color: lightgray;
+}
