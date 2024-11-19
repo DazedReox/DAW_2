@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(253, 152, 69);
+}
+
+h1{
+    font-style:unset; 
+    color: white;
+}
+
+div nav ul a {
+    color: white;   
+    text-decoration: none;
+    align-items: right;
+}
