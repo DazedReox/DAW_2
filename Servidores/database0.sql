@@ -41,4 +41,11 @@ CREATE TALBE usuarios (
         }
         return $conexion;
     }
+
+    $usu = new Usuarios('Alex', '1234', '2');
+    $stmt = $bd->prepare("INSERT INTO usuarios (nombre, clave, rol) VALUES (Alex, 1234, 2)");
+    $s-> setFetchMode(PDO::FETCH_ASSOC);
+    $s->bindParam(":nombre", $nom);
+    $nom = 'Daniel';
+    $s->execute(); 
 ?>
