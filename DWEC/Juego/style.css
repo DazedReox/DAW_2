@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#pongCanvas {
+    border: 2px solid #fff;
+    display: block;
+}
+ 
