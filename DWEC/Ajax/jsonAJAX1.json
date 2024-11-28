@@ -1,0 +1,15 @@
+{
+    "usuarios":[
+    {
+        "nombre":"jose",
+        "apellido":"piñero",
+        "edad":30,
+        "telefonos":["123456789","987654321"]
+    },
+    {
+        "nombre":"gorka",
+        "apellidos": "nomacuerdo",
+        "edad":19
+    }
+]
+}

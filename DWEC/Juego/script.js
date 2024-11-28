@@ -92,10 +92,30 @@ function draw() {
     drawRect(canvas.width / 2 - 1, 0, 2, canvas.height, 'gray');
 }
 
+
+var p1 = 0;
+var p2 = 0;
+
+function updateScore() {
+    if (ballX <= 0) {
+        p2++;
+        ballX = canvas.width / 2;
+        ballY = canvas.height / 2;
+        document.write(p1 + " - " + p2);
+    } else if (ballX >= canvas.width) {
+        p1++;
+        ballX = canvas.width / 2;
+        ballY = canvas.height / 2;
+        document.write(p1 + " - " + p2);
+    }
+}
+
 function gameLoop() {
     update();
     draw();
     requestAnimationFrame(gameLoop);
+    updateScore();
 }
+
 
 gameLoop();

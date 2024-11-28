@@ -11,3 +11,6 @@ if (method_exists($controller, $action)) {
 } else {
     echo "Acción no encontrada";
 }
+
+
+// front controller
