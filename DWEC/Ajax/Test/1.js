@@ -25,7 +25,7 @@ window.onload = () => {
                     `Se han encontrado ${datosRecibidos.totalResults} películas`;
                 document.getElementById("numeroResultados").style.display = "block"; 
                 
-                for (let pelicula of datosRecibidos.Search) {
+                /***for (let pelicula of datosRecibidos.Search) {
                     let li = document.createElement("li");
                     li.innerHTML = `${pelicula.Title} - ${pelicula.Year}`;
                     miLista.appendChild(li);
@@ -38,7 +38,24 @@ window.onload = () => {
                     li.appendChild(img);
                 }
 
-                document.getElementById("lista").miLista.appendChild(li);
+                document.getElementById("lista").miLista.appendChild(li);***/
+
+                for (let pelicula of datosRecibidos.Search) {
+                    let li = document.createElement("li");
+                    li.innerHTML = `${pelicula.Title} - ${pelicula.Year}`;
+                    
+                    let img = document.createElement("img");
+                    img.src = pelicula.Poster !== "N/A" ? pelicula.Poster : "placeholder.jpg";
+                    img.alt = pelicula.Title;
+                    img.style.cursor = "pointer";
+                
+                    img.addEventListener("click", () => detalle(pelicula.imdbID));
+                
+                    li.appendChild(img);
+                    document.getElementById("lista").appendChild(li);
+                }
+                
+                
             })
             .catch(error => console.error("Error en la petición:", error));
     }
@@ -67,7 +84,7 @@ window.onload = () => {
 
                 document.getElementById("genero").innerHTML = datosRecibidos.Genre;
                 document.getElementById("director").innerHTML = datosRecibidos.Director;
-                document.getElementById("anio").innerHTML = datosRecibidos.Year;
+                document.getElementById("año").innerHTML = datosRecibidos.Year;
                 document.getElementById("pais").innerHTML = datosRecibidos.Country;
                 document.getElementById("idioma").innerHTML = datosRecibidos.Language;
                 document.getElementById("duracion").innerHTML = datosRecibidos.Runtime;
@@ -92,7 +109,7 @@ window.onload = () => {
         //document.getElementById("poster").style.display = "none";
         document.getElementById("genero").innerHTML = "";
         document.getElementById("director").innerHTML = "";
-        document.getElementById("anio").innerHTML = "";
+        document.getElementById("año").innerHTML = "";
         document.getElementById("pais").innerHTML = "";
         document.getElementById("idioma").innerHTML = "";
         document.getElementById("duracion").innerHTML = "";
@@ -104,5 +121,47 @@ window.onload = () => {
     document.getElementById("buscarBtn").addEventListener("click", peticionAjax);
     document.getElementById("resetBtn").addEventListener("click", reset);
 
+    //mostrar los detalles
+    function detalle(idPelicula) {
+        fetch(`https://www.omdbapi.com/?apikey=1a3dcaad&i=${idPelicula}`)
+            .then(response => response.json())
+            .then(datosRecibidos => {
+                if (datosRecibidos) {
+                    document.getElementById("modal-titulo").innerText = datosRecibidos.Title || "Sin título";
+                    document.getElementById("modal-poster").src = datosRecibidos.Poster !== "N/A" ? datosRecibidos.Poster : "placeholder.jpg";
+                    document.getElementById("modal-sinopsis").innerText = datosRecibidos.Plot || "Sin descripción.";
+                    document.getElementById("modal-genero").innerText = datosRecibidos.Genre || "Desconocido";
+                    document.getElementById("modal-director").innerText = datosRecibidos.Director || "Desconocido";
+                    document.getElementById("modal-año").innerText = datosRecibidos.Year || "Desconocido";
+                    document.getElementById("modal-pais").innerText = datosRecibidos.Country || "Desconocido";
+                    document.getElementById("modal-idioma").innerText = datosRecibidos.Language || "Desconocido";
+                    document.getElementById("modal-duracion").innerText = datosRecibidos.Runtime || "Desconocido";
+                    document.getElementById("modal-rating").innerText = datosRecibidos.imdbRating || "Desconocido";
+                } else {
+                    console.error("No se encontraron datos para esta película.");
+                }
+    
+                document.getElementById("modal").style.display = "flex";
+            })
+            .catch(error => console.error("Error al obtener los detalles de la película:", error));
+            fetch(`https://www.omdbapi.com/?apikey=1a3dcaad&i=${idPelicula}`)
+            .then(response => response.json())
+            .then(datosRecibidos => {
+                console.log("Datos recibidos para la película:", datosRecibidos);
+        
+            })
+        .catch(error => console.error("Error al obtener los detalles de la película:", error));
+
+    }
+    //cerrar
+    document.getElementById("closeModal").addEventListener("click", () => {
+            document.getElementById("modal").style.display = "none";
+    });
+    //cerar 2
+    document.getElementById("modal").addEventListener("click", (event) => {
+        if (event.target.id === "modal") {
+            document.getElementById("modal").style.display = "none";
+        }
+    });
     
 };
