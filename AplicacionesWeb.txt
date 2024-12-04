@@ -1,0 +1,36 @@
+1.- Buscar el comando del sistema "find", observar su sintaxis y funcionalidad. Buscar el comando "locate", ver su sintaxis y funcionalidad.
+Comparar ambos, en funcionalidad (¿Cuando es mejor usar uno y cuando otro?)
+
+find <directory_path>           <search_parameter>
+-name, -iname 	                Filtrar por nombre de archivo
+-type 	                        Filtrar por tipo de archivo
+-size, -empty 	                Filtrar por tamaño de archivo
+-ctime, -mtime, -atime 	        Filtrar por marca de tiempo
+-user, -group 	                Filtrar por propietario y grupo
+-perm 	                        Filtrar por derechos de archivo
+
+locate [my-file]
+-r         Nombre Exacto
+-c         Numero de Archivos
+-i         Ignorar Minusculas y Mayusculas
+-e         Archivos Existentes
+-q         Errores Durante La Busqueda
+n          Limitar los resultados
+
+2.- Buscar con "find" y con "locate" el fiche de log de Apache
+
+sudo find / -type f -name "*apache*log*" 
+"/" Directorio raiz
+"-type f" Solo archivos normales, sin directorios
+" -name "*apache*log*" " parametro que filtra por el nombre de lo que se introduce
+
+locate apache | grep log
+Este comando filtra los archivos encontrados en apache que contengan la palabra log
+
+3.- Abrir fichero de log de Apache y seleccionar 3 lineas, las copiais en el documento y las comentais
+
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 9A91-C87D
+
+ Directorio de C:\Program Files\NetBeans-19\netbeans\extide\ant\lib
+
