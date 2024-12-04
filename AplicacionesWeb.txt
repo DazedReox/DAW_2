@@ -29,8 +29,14 @@ Este comando filtra los archivos encontrados en apache que contengan la palabra 
 
 3.- Abrir fichero de log de Apache y seleccionar 3 lineas, las copiais en el documento y las comentais
 
- El volumen de la unidad C no tiene etiqueta.
- El número de serie del volumen es: 9A91-C87D
+-[Wed Nov 10 10:21:23.811033 2021] [core:error] [pid 22308:tid 3212342123] [client 10.1.2.3] File does not exist: /usr/local/apache2/htdocs/favicon.ico
 
- Directorio de C:\Program Files\NetBeans-19\netbeans\extide\ant\lib
+Fecha y hora, Modulo y nivel de seguridad, identificacion del proceso, mensaje de error
 
+-[09/Feb/2024:15:36:14 +0100] "GET / HTTP/1.1" 200 3460 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"
+
+Fecha y hora, metodo http y solicitud, tamaño de la respuesta, referencia, usuario-agente.
+
+-frank [10/Oct/2000:13:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326 frank [10/Oct/2000:13:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326 
+
+Usuario autenticado, fecha y hora, metodo http, codigo de estado de http, tamaño de la respuesta.
