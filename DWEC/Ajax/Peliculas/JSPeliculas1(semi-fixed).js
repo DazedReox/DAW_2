@@ -1,18 +1,32 @@
 window.onload = () => {
     let peliABuscar = "";
     const apiKey = "1a3dcaad";
+    let paginaActual = 1;
+    let cargando = false;
 
-    // Función para realizar la búsqueda
-    function peticionAjax() {
-        peliABuscar = document.getElementById("buscador").value.trim();
+    //buscar
+    function peticionAjax(reset = false) {
+        /**peliABuscar = document.getElementById("buscador").value.trim();
         if (!peliABuscar) {
             alert("Por favor, ingresa un término de búsqueda.");
             return;
+        }**/
+        if (reset) {
+            document.getElementById("lista").innerHTML = "";
+            paginaActual = 1;
+        }
+            
+        peliABuscar = document.getElementById("buscador").value.trim();
+        if (peliABuscar === "") {
+            document.getElementById("numeroResultados").innerHTML = "Introduce una película para buscar.";
+            return;
         }
 
+        cargando = true;
         fetch("https://www.omdbapi.com/?apikey=" + apiKey + "&s=" + encodeURIComponent(peliABuscar), { method: "GET" })
             .then(response => response.json())
             .then(datosRecibidos => {
+                cargando = false;
                 if (datosRecibidos.Response === "False") {
                     alert("No se encontraron resultados.");
                     return;
@@ -55,9 +69,14 @@ window.onload = () => {
                     document.getElementById("lista").appendChild(li);
                 }
                 
-                
+                paginaActual++;
             })
-            .catch(error => console.error("Error en la petición:", error));
+            .catch(error =>{
+                cargando = false;
+                console.error("Error al hacer la peticion:", error);
+                document.getElementById("numeroResultados").innerHTML = "Error al cargar. Intentalo de nuevo";
+                document.getElementById("numeroResultados").style.display = "block";
+            });
     }
 
     function detalle(idPelicula) {
@@ -91,9 +110,11 @@ window.onload = () => {
                 document.getElementById("rating").innerHTML = datosRecibidos.imdbRating;
                 document.getElementById("detalles").style.display = "block";
             })
-            .catch(error => console.error("Error en la petición:", error));
+            .catch(error => {
+                console.error("Error en la petición:", error);
+                alert("Error al cargar los detalles de la película.");
+            });
     }
-
 
     function reset() {
         //lista
@@ -116,12 +137,17 @@ window.onload = () => {
         document.getElementById("rating").innerHTML = "";
         //document.getElementById("detalles").style.display = "none";
         document.getElementById("buscador").value = "";
+        paginaActual = 1;
+        cargando = false;
     }
 
     document.getElementById("buscarBtn").addEventListener("click", peticionAjax);
     document.getElementById("resetBtn").addEventListener("click", reset);
 
     //mostrar los detalles
+
+    //a veces da error los detalles por pedirlos muchas veces
+
     function detalle(idPelicula) {
         fetch(`https://www.omdbapi.com/?apikey=1a3dcaad&i=${idPelicula}`)
             .then(response => response.json())
@@ -163,5 +189,10 @@ window.onload = () => {
             document.getElementById("modal").style.display = "none";
         }
     });
-    
-};
+
+    window.addEventListener("scroll", () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && !cargando) {
+            peticionAjax(false); 
+        }
+    });
+}
