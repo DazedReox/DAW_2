@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Perfil</title>
+    <title>Editar Usuario</title>
     <link rel="stylesheet" href="/public/css/styles.css">
 </head>
 <body>
-    <h1>Editar Perfil</h1>
-    <form action="/usuarios/perfil" method="POST">
+    <h1>Editar Usuario</h1>
+    <form action="/usuarios/edit/1" method="POST">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" value="Pedro Callejas" required>
         
@@ -19,7 +19,13 @@
         <input type="password" id="password" name="password">
         <small>Deja en blanco si no deseas cambiarla</small>
         
-        <button type="submit">Actualizar Perfil</button>
+        <label for="rol">Rol:</label>
+        <select id="rol" name="rol">
+            <option value="empleado" selected>Empleado</option>
+            <option value="propietario">Propietario</option>
+        </select>
+        
+        <button type="submit">Actualizar Usuario</button>
     </form>
 </body>
 </html>

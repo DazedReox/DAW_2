@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Registrar Usuario</title>
     <link rel="stylesheet" href="/public/css/styles.css">
 </head>
 <body>
     <h1>Registrar Usuario</h1>
-    <form action="/auth/register" method="POST">
+    <form action="/usuarios/create" method="POST">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         
-        <label for="username">Usuario:</label>
+        <label for="username">Nombre de Usuario:</label>
         <input type="text" id="username" name="username" required>
         
         <label for="password">Contraseña:</label>
@@ -24,7 +24,7 @@
             <option value="propietario">Propietario</option>
         </select>
         
-        <button type="submit">Registrar</button>
+        <button type="submit">Registrar Usuario</button>
     </form>
 </body>
 </html>
