@@ -16,6 +16,7 @@ export const addToCart = (product) => {
 //contenido carro
 export const getCart = () => cart;
 
+//limpiarlo
 export const clearCart = () => {
   cart.length = 0;
 };

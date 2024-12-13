@@ -8,18 +8,14 @@ export const renderProducts = async () => {
 
   const products = await fetchProducts();
 
-  app.innerHTML = products
-    .map(
-      (product) => `
+  app.innerHTML = products.map((product) => `
       <div class="product-card">
         <img src="${product.images[0]}" alt="${product.title}">
         <h3>${product.title}</h3>
         <p>$${product.price.toFixed(2)}</p>
         <button data-id="${product.id}" class="add-to-cart">Agregar al carrito</button>
       </div>
-    `
-    )
-    .join("");
+    `).join("");
 
   //botones
   document.querySelectorAll(".add-to-cart").forEach((button) => {
