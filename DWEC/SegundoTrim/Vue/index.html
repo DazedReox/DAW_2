@@ -10,7 +10,7 @@
         <h1>{{titulo}}</h1>
         Contenido de la variable message: {{message}}
         <p v-if="mostrarEdad">
-            Y la edad es: {{edad}}
+            Y la edad es: {{edad}}x
         </p>
         <p v-if="edad>=18">
             Eres mayor de edad.
@@ -21,7 +21,9 @@
         <input type="text" v-model="contenidoDelInput">
         <button v-on:click="pulsar">Añadir Elemento</button>
         <ol>
-            <li v-for="(nombre,indice) in listaNombres" v-on:click="borrarElemento(nombre)"></li>
+            <li v-for="(nombre,indice) in listaNombres" v-on:click="borrarElemento(indice)">
+                {{nombre}}
+            </li>
 
 
         </ol>
