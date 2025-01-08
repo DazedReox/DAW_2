@@ -23,6 +23,16 @@
             </li>
         </ol>
 
+        <form v-on:submit.prevent="addItem">
+            <h2>Lista de la compra.</h2>
+            <p>Nombre del producto: <input type="text" required v-model="itemName"></p>
+            <p>Unidades del producto: <input type="text" v-model="itemNumber" @keydown.enter="pressed2"></p>
+            <button type="submit">Añadir</button>
+            <p><u>Lista</u>:</p>
+            <ul>
+                <li v-for="item in shoppingList" v-on:click="deleteElement2(index)">{{item.name}}, {{item.number}}</li>
+            </ul>
+        </form>
        </div>
        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
        <script src="vue1.js"></script>

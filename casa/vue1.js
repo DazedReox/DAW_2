@@ -8,7 +8,13 @@ const app = Vue.createApp({
             age : 26,
             showAge : false,
             nameList:[],
-            inputContent: "Añade un nombre"
+            inputContent: "Añade un nombre",
+
+            itemName: null,
+            itemNumber: null,
+            shoppingList: [{
+                name: 'Tomatoes', number: 5
+            }]
         }
     },
     methods:{
@@ -21,6 +27,27 @@ const app = Vue.createApp({
         },
         deleteInput(){
             this.inputContent = "";
+        },
+        addItem(){
+            let item = {
+                name : this.itemName,
+                number : this.itemNumber
+            }
+            this.shoppingList.push(item);
+            this.itemName = null;
+            this.itemNumber = null;
+
+            //this.shoppingList.push(this.itemName, this.itemNumber);
+            //this.itemName = "";
+            //this.itemNumber = "";
+        },
+        pressed2(){
+            this.shoppingList.push(item);
+            this.itemName = null;
+            this.itemNumber = null;
+        },
+        deleteElement2(pos){
+            this.shoppingList.splice(pos,1);
         }
     }
 })
