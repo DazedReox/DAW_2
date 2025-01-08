@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+       <div id="app">
+        <h1>{{title}}</h1>
+
+        <p>{{message}}</p>
+        <p v-if="age>18">Es mayor de edad: {{age}}</p>
+        <p v-else>Es menor: {{age}}</p>
+
+        <input @click="deleteInput()" v-model="inputContent" @keydown.enter="pressed" type="text">
+        <button v-on:click="pressed">Añadir nombre</button>
+        <button @click="deleteElement(index)">Borrar</button>
+        
+        <ol>
+            <li v-for="(name,index) in nameList" v-on:click="deleteElement(index)">
+                <p>{{name}}</p>
+            </li>
+        </ol>
+
+       </div>
+       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+       <script src="vue1.js"></script>
+    </body>
+</html>

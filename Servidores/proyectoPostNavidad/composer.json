@@ -1,0 +1,18 @@
+{
+    "name": "reox/proyecto-post-navidad",
+    "description": "Tienda",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Reox\\ProyectoPostNavidad\\": "src/",
+            "Controllers\\": "./src/controllers",
+            "Models\\": ".src/models",
+            "Lib\\": ".src/Lib",
+            "Repositories\\": ".src/repositories",
+            "Services\\": ".src/services",
+            "Views\\": ".src/views"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
