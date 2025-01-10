@@ -7,3 +7,5 @@
 </head>
 <body>
     <h1>Bienvenido a mi Tienda</h1>
+    <a href="<?php BASE_URL ?>/login">Log in</a>
+    <a href="<?php BASE_URL ?>/login"></a>

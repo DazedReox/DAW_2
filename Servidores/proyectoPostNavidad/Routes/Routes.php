@@ -11,5 +11,14 @@
     Router::add('GET', '/not-found', function(){
         ErrorController::error404();
     });
+    public Routes{
+
+    
+        static function index(){
+            Router::add('GET', '/', function(){
+                echo '<h1></h1>'
+            })
+        }
+    }
 ?>
 
