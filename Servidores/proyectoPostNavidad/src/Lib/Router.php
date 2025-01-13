@@ -6,11 +6,7 @@ class Router {
         Router::add('GET', '/', function(){
             (new DashboardController())->index();
         });
-        Router::add('GET', '/not-found', function(){
-            ErrorController::error404();
-        });
-
-        Router::dispatch();
+        Router::dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
     }
 
     private static $routes = [];
