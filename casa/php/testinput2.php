@@ -34,4 +34,19 @@
             $website = test_input($_POST["website"]);
         }
     }
+
+    $age = test_input($_POST["age"]);
+    if(!preg_match("/^[a-zA-Z-' ]*$/", $name)){
+        $nameErr = "Only letters and white space is allowed";
+    }
+
+    $email2 = test_input($_POST["email2"]);
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $emailErr = "Invalid email error";
+    }
+
+    $website = test_input($_POST["website"]);
+    if(!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $website2)){
+        $websiteErr = "URL not valid";
+    }
 ?>
