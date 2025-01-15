@@ -10,7 +10,8 @@
             "Lib\\": ".src/Lib",
             "Repositories\\": ".src/repositories",
             "Services\\": ".src/services",
-            "Views\\": ".src/views"
+            "Views\\": ".src/views",
+            "App\\": "/src"
         }
     },
     "minimum-stability": "stable",

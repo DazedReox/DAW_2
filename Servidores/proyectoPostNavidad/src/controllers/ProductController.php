@@ -1,11 +1,10 @@
 <?php 
-    namespace Controllers;
-    use Lib\Pages;
+    namespace App\Controllers;
 
-    class ProductController{
-        public static function index(){
-            $pages = new Pages();
-            $pages->render('Productos\index');
-        }
-    }
+    class ProductController {
+        public function index() {}
+        public function create() {}
+        public function store() {}
+        public function show($id) {}
+    }    
 ?>
