@@ -23,7 +23,7 @@
     <?php if (isset($gender) && $gender == "male") echo "checked"; ?>
     value ="male">Male
     <input type="radio" name="other"
-    <?php if(isset($gender) &&%gender == "other") echo "checked"; ?>
+    <?php if(isset($gender) && $gender == "other") echo "checked"; ?>
     value = "other">Other
     </form> 
 </body>

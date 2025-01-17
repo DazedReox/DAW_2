@@ -26,7 +26,7 @@
             $gender = test_input($_POST["gender"]);
         }
     }
-
+    
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(empty($_POST["website"])){
             $websiteErr = "Website is required";
