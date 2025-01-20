@@ -1,0 +1,16 @@
+{
+    "name": "reox/PHPRecuperacion",
+    "description": "Recuperacion",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Reox\\PHPRecuperacion\\": "src/",
+            "Controllers\\": "./src/Controllers",
+            "Models\\": ".src/Models",
+            "Views\\": ".src/Views",
+            "App\\": "/src"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
