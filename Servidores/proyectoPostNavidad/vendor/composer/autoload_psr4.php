@@ -12,5 +12,7 @@ return array(
     'Reox\\ProyectoPostNavidad\\' => array($baseDir . '/src'),
     'Models\\' => array($baseDir . '/.src/models'),
     'Lib\\' => array($baseDir . '/.src/Lib'),
+    'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'Controllers\\' => array($baseDir . '/src/controllers'),
+    'App\\' => array('/src'),
 );

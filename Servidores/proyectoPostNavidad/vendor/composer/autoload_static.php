@@ -28,9 +28,17 @@ class ComposerStaticInit04d51096444f4d36523875cf7f747f44
         array (
             'Lib\\' => 4,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'C' => 
         array (
             'Controllers\\' => 12,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
         ),
     );
 
@@ -59,9 +67,17 @@ class ComposerStaticInit04d51096444f4d36523875cf7f747f44
         array (
             0 => __DIR__ . '/../..' . '/.src/Lib',
         ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
         'Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/controllers',
+        ),
+        'App\\' => 
+        array (
+            0 => '/src',
         ),
     );
 
