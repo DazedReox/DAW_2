@@ -1,7 +1,7 @@
 api_url = "https://api.api-ninjas.com/v1/randomimage";
 
 const app = Vue.createApp({
-    data(){
+        data(){
         return{
             title: "Titulo con Vue",
             message: "Mensaje 1",
