@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas de Disney</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="divdellinks">
+                <ul class="Uldelinks">
+                    <li class="lidelinks">
+                        <a class="navlink" href="#">Inicio</a>
+                    </li>
+                    <li class="lidelinks">
+                        <a class="navlink" href="#about">Sobre Nosotros</a>
+                    </li>
+                    <li class="lidelinks">
+                        <a class="navlink" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <a class="linkDisney" href="#">Disney</a>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="elreyleon2.jpg" class="d-block w-100" alt="El Rey León">
+            </div>
+            <div class="carousel-item">
+                <img src="labellaylabestia.jpg" class="d-block w-100" alt="La Bella y la Bestia">
+            </div>
+            <div class="carousel-item">
+                <img src="frozen.jpg" class="d-block w-100" alt="Frozen">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <section id="movies" class="peliculas">
+        <div class="container">
+            <h2 class="tituloH2">Películas Populares</h2>
+            <div class="containersection">
+                <div class="container2">
+                    <div class="cartel">
+                        <img src="elreyleon2.jpg" class="cartelImg" alt="El Rey León">
+                        <div class="cartelCuerpo">
+                            <h5 class="h5">El Rey León</h5>
+                            <p class="cartelTexto">La épica historia de Simba, un joven león que lucha por encontrar su lugar en el "Ciclo de la Vida".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="cartel">
+                        <img src="labellaylabestia.jpg" class="cartelImg" alt="La Bella y la Bestia">
+                        <div class="cartelCuerpo">
+                            <h5 class="h5">La Bella y la Bestia</h5>
+                            <p class="cartelTexto">Un clásico cuento de amor entre Bella y una Bestia encantada, con canciones inolvidables.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="cartel">
+                        <img src="frozen.jpg" class="cartelImg" alt="Frozen">
+                        <div class="cartelCuerpo">
+                            <h5 class="h5">Frozen</h5>
+                            <p class="cartelTexto">La mágica historia de dos hermanas, Elsa y Anna, que encuentran su camino juntas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Disney Películas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
