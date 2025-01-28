@@ -1,0 +1,60 @@
+body {
+    background-color: #f9f9f9;
+}
+.navbar {
+    background-color: #007bff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.Uldelinks {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.lidelinks {
+    margin-right: 15px;
+}
+.navlink {
+    color: #eaeaea !important;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+.navlink:hover {
+    color: #007bff !important;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.linkDisney {
+    font-weight: bold;
+    color: #fff !important;
+    text-decoration: none;
+}
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+}
+.peliculas {
+    margin-top: 100px;
+}
+.cartelImg {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.cartel {
+    height: 100%;
+}
+.cartelCuerpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
