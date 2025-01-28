@@ -1,0 +1,23 @@
+body{
+    background-color: rgba(104, 53, 53, 0.962);
+}
+
+.apartado1{
+    background-color:rgb(222, 197, 142);
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+h2{
+    color: orange;
+    text-align:left;
+}
+
+header{
+    background-color: lightgrey;
+}
+
+a{
+    text-align: center;
+}
