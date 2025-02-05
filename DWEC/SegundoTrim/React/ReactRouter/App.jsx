@@ -15,7 +15,6 @@ function App(){
                 <Link to="/inicio">Inicio</Link>
                 <Link to="/login">Login</Link>
                 <Link to="/recordatorios">Recordatorios</Link>
-                
 
                 <Routes>
                     <Route path="/login" element={<Login />} />

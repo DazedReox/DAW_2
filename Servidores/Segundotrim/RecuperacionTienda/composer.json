@@ -1,0 +1,21 @@
+{
+    "name": "reox/RecuperacionTienda",
+    "description": "Tienda",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Reox\\ProyectoPostNavidad\\": "src/",
+            "Controllers\\": "./src/Controllers",
+            "Models\\": ".src/Models",
+            "Lib\\": ".src/Lib",
+            "Repositories\\": ".src/Repositories",
+            "Services\\": ".src/Services",
+            "Views\\": ".src/Views",
+            "App\\": "/src"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "firebase/php-jwt": "^6.10"
+    }
+}
