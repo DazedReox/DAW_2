@@ -61,33 +61,30 @@ class UserController extends Controller
         }
     }
 
-    // Cerrar sesión
-    public function logout()
-    {
+    //logout
+    public function logout(){
         Auth::logout();
         header('Location: /login');
     }
 
-    // Mostrar perfil de usuario
-    public function profile()
-    {
+    //enseñar el perfil
+    public function profile(){
         $user = Auth::user();
-        if (!$user) {
+        if (!$user){
             header('Location: /login');
             exit;
         }
         return $this->view('users/profile', ['user' => $user]);
     }
 
-    // Validación de datos del usuario
-    private function validateUserData($data)
-    {
-        if (empty($data['username']) || empty($data['email']) || empty($data['password'])) {
-            die('Todos los campos son obligatorios.');
+    //comprobacion de los datos 
+    private function validateUserData($data){
+        if (empty($data['username']) || empty($data['email']) || empty($data['password'])){
+            die('Los campos son obligatorios');
         }
 
-        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-            die('El correo electrónico no es válido.');
+        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)){
+            die('El correo no es valido');
         }
     }
 }
