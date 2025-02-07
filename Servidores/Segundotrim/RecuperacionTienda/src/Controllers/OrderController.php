@@ -15,8 +15,7 @@ class OrderController extends Controller
     }
 
     // Mostrar todos los pedidos
-    public function index()
-    {
+    public function index(){
         $orders = $this->orderRepository->getAllOrders();
         return $this->view('orders/index', ['orders' => $orders]);
     }
@@ -91,17 +90,7 @@ class OrderController extends Controller
             return $this->view('errors/500', ['error' => 'Error al eliminar el pedido.']);
         }
     }
-
-    // Cambiar el estado de un pedido
-    public function changeStatus($id, $status)
-    {
-        if ($this->orderRepository->updateOrderStatus($id, $status)) {
-            header('Location: /orders');
-        } else {
-            return $this->view('errors/500', ['error' => 'Error al cambiar el estado del pedido.']);
-        }
-    }
-
+   
     // Validación de datos del pedido
     private function validateOrderData($data)
     {

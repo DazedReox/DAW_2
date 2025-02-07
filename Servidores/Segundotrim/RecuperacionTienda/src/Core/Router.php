@@ -2,13 +2,9 @@
 
 namespace App\Core;
 
-class Router
-{
-    private $routes = [];
-
-    // Definir una nueva ruta
-    public function add($method, $route, $action)
-    {
+class Router{
+    //nueva ruta
+    public function add($method, $route, $action){
         $this->routes[] = [
             'method' => strtoupper($method),
             'route' => $route,
@@ -27,16 +23,43 @@ class Router
 
                 if (class_exists($controllerName) && method_exists($controllerName, $methodName)) {
                     $controller = new $controllerName();
-                    array_shift($matches); // Eliminar la URL completa del primer match
+                    array_shift($matches);
                     call_user_func_array([$controller, $methodName], $matches);
                     return;
                 }
             }
         }
 
-        // Ruta no encontrada
+        //si no se encuentra
         http_response_code(404);
         echo '404 - Página no encontrada';
+    }
+    private $routes = [];
+
+    public function get($uri, $action)
+    {
+        $this->routes['GET'][$uri] = $action;
+    }
+
+    public function post($uri, $action)
+    {
+        $this->routes['POST'][$uri] = $action;
+    }
+
+    public function registerRoutes()
+    {
+        //aqui se cargan desde la db o archivo
+    }
+
+    function handleRequest() {
+        //enrutador
+    }
+
+    private function callAction($action)
+    {
+        list($controller, $method) = $action;
+        $controllerInstance = new $controller();
+        $controllerInstance->$method();
     }
 }
 ?>
