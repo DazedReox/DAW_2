@@ -48,7 +48,7 @@ class Router{
 
     public function registerRoutes()
     {
-        //aqui se cargan desde la db o archivo
+        //aqui se cargan las rutas desde la db o archivo
     }
 
     function handleRequest() {

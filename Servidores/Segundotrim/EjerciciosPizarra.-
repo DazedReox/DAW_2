@@ -1,0 +1,13 @@
+1.- 
+Un generador en PHP es una función especial que permite iterar sobre un 
+conjunto de datos sin necesidad de almacenarlos todos en memoria al mismo tiempo.
+
+2.- 
+Puedo usarlo en el carrito a la hora de poner la enumeracion de los productos
+
+3.- 
+Si, los generadores en PHP se pueden usar en Laravel, son útiles 
+cuando trabajas con grandes volumenes de datos en consultas a bases de datos
+o en el procesamiento de archivos.
+
+4.-
