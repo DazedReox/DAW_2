@@ -1,55 +1,46 @@
 import React, { useState, useEffect } from "react";
-import { Detalles } from "./Detalles";
 
 const API = "https://jsonplaceholder.typicode.com/todos";
-const opciones = useState([]);
-const detalle = useState([]);
-const clickado = useState();
-
 
 export const DefProyecto = () => {
+  const [opciones, setOpciones] = useState([]);
+  const [detalle, setDetalle] = useState(null);
+  const [clickado, setClickado] = useState(null);
+
+  useEffect(() => {
     fetch(API)
-    .then(response => response.json())
-    .data(data => opciones.push(data), slice(0, 10))
-    .catch(error => console.log("error 404"));
+      .then(response => response.json())
+      .then(data => setOpciones(data.slice(0, 10)))
+      .catch(error => console.log("Error 404"));
+  }, []);
 
-    
-    useEffect(() => {
-        fetch(API)
-        .then(response => response.json())
-        .data(data => opciones.push(data), slice(0, 10))
-        .catch(error => console.log("error 404"));
-    });
+  const handleClick = (id) => {
+    fetch(`${API}/${id}`)
+      .then(response => response.json())
+      .then(data => setDetalle(data))
+      .catch(error => console.log("Error 404"));
+    setClickado(id);
+  };
 
-    /*const handleClick = (id) => {
-        fetch("https://jsonplaceholder.typicode.com/todos/id")
-        .then(response => response.json())
-        .data(data => detalle.push(data))
-        .catch(error => console.log("error 404"));
-    }*/
-
-    function Detalles(id){
-        return (
-            <div>
-                <h1>Detalles</h1>
-                <li>{detalle.title}</li>
-                <li>{detalle.completed}</li>
-                <li>{detalle.userId}</li>
-                <li>{detalle.id}</li>
-            </div>
-        )
-    };
-        
-
-};
-return (
+  return (
     <div>
-        <h1>Primeras 10 opciones</h1>
-        <ul>
-            {opciones.map(opcion => <li><button onClick={() => clickado(opcion.id)}>{opcion.title}</button></li>)}
-        </ul>
-        <ul>
-            {clickado && <Detalles id={clickado} />}
-        </ul>
+      <h1>Primeras 10 opciones</h1>
+      <ul>
+        {opciones.map(opcion => (
+          <li key={opcion.id}>
+            <button onClick={() => handleClick(opcion.id)}>{opcion.title}</button>
+          </li>
+        ))}
+      </ul>
+      {detalle && (
+        <div>
+          <h2>Detalles</h2>
+          <p>ID: {detalle.id}</p>
+          <p>Título: {detalle.title}</p>
+          <p>Completado: {detalle.completed ? "Sí" : "No"}</p>
+          <p>User ID: {detalle.userId}</p>
+        </div>
+      )}
     </div>
-)
+  );
+};
