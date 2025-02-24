@@ -1,0 +1,66 @@
+Ejercicio1:
+A: Los pacientes registran proporcionando nombre, apellidos, telefono, DNI, correo y contraseña. Si el paciente 
+tiene contratado un seguro medico debera de indicar el nombre de la compañia aseguradora. No olvide guardar la contraseña encriptada.
+
+B:Cuando el paciente se registra se le envia un correo de confirmacion como un token para verificar la cuenta.
+
+D: Una vez confirmada la cuenta el paciente podra inciar sesion. Para ello usará correo y contraseña.
+
+F: Cualquier usuario podra consultar las especialidades, los medicos de cada una de esas especialidades y los 
+servicios adicionales ofertados en la clinica (ejemplo: resonancia magentica, PET TAC, etc)
+
+H: Cuando el paciente inicie sesion podra reservar una cita seleccionando la especialidad y el facultativo que le atenderá 
+
+I: El paciente tambien podra reservar servicios adicionales (ejemplo: radiografia, analisis, TAC, etc)
+
+J: Solo se podran reservar citas en horarios disponibles y en fechas posteriores a la actual.
+
+K: Una vez confirmada la cita se enviara un correo con los detalles de la cita en formato PDF. Se incluirá un resumen con la fecha y hora,
+la consulta donde será atendido, el nombre del medico que lo atenderá, los sercicios que recibirá y si procede el importe de los mismos.
+
+N: Crear, modificar y eliminar citas, servicios y médicos.
+
+
+
+EJERCICIO2: Desarrolle una API REST en PHP àra gestionar las listas de reproduccion de musica con los isguientes endpoints en PHP: 
+
+B:GET/lista{listaNombre}/canciones/{titulo}: Devuelve la informacion de una cancion especifica
+
+C:POST/lista/{listaNombre}/canciones: Añade una nueva cancion a una lista de reproduccion
+
+E: DELETE/lista/{listaNombre}/canciones/{titulo}: Elimina una cancion de la lista de reproducion.
+
+requisitos: 
+acceda a la base de datos mediante PDO
+utilice PDO con consultas preparadas
+autenticacion JWT
+recuerde validar datos
+utilice MVC
+y composer para la autocarga 
+gestione posibles errores
+
+
+EJERCICIO3:
+A: Los pacientes registran proporcionando nombre, apellidos, telefono, DNI, correo y contraseña. Si el paciente 
+tiene contratado un seguro medico debera de indicar el nombre de la compañia aseguradora. No olvide guardar la contraseña encriptada.
+
+C: Se debe validar que el usuario no esté registrado previamente.
+
+D: Una vez confirmada la cuenta el paciente podra inciar sesion. Para ello usará correo y contraseña.
+
+E: Si el usuario no recuerda su contraseña podrá restablecerla.
+
+F: Cualquier usuario podra consultar las especialidades, los medicos de cada una de esas especialidades y los 
+servicios adicionales ofertados en la clinica (ejemplo: resonancia magentica, PET TAC, etc)
+
+H: Cuando el paciente inicie sesion podra reservar una cita seleccionando la especialidad y el facultativo que le atenderá 
+
+J: Solo se podran reservar citas en horarios disponibles y en fechas posteriores a la actual.
+
+K: Una vez confirmada la cita se enviara un correo con los detalles de la cita en formato PDF. Se incluirá un resumen con la fecha y hora,
+la consulta donde será atendido, el nombre del medico que lo atenderá, los sercicios que recibirá y si procede el importe de los mismos.
+
+N: Crear, modificar y eliminar citas, servicios y médicos.
+
+P: Cuando el paciente precise de autorizacion de la aseguradora para que le sea prestado algun servicio se guardará el fichero con una copia 
+de la autorizacion que este haya aportado.
