@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Detalles } from "./Detalles";
 
 const API = "https://jsonplaceholder.typicode.com/todos";
-const opciones = useState([]);
+export const opciones = useState([]);
 const detalle = useState([]);
-const clickado = useState();
+export const clickado = useState();
 
 
 export const DefProyecto = () => {

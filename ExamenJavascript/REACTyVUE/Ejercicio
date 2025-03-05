@@ -1,0 +1,21 @@
+Creacion de una aplicacion para llevar un registro de reparaciones de una tienda de electrodomesticos. Cada entrada consta de una descripcion
+completa del problema, fecha alta, si se ha completado o no la categoría.
+
+- La aplicacion debe almacenar ese registro en local, de tal modo que cada vez que se encarga una web mostrará del listado de reparaciones.
+
+- La interfaz contará de 3 componentes: altaPresupuesto, listaPresupuesto y detalleReparacion
+
+- altaPresupuesto solo tendra un input de tipo text para introducir la descripcion, un desplegable para seleccionar categoria (lavadora, microondas, etc) y un nombre de dueño. Al pulsar ENTER se dará de alta la reparación, en la fecha actual, siempre que se haya introducido todos los campos anteriores.
+
+- El nombre del dueño se escoge de una lista de usuarios que se obtiene de la API JSONPlaceHolder mediante una peticion a 
+https://jsonplaceholder.typicode.com/users
+
+- listaPresupuestos monstrará tantas reparaciones como tenga la aplicacion mediante una lista mostrando fecha y descripcion, ordenada por fecha de alta. En caso de pulsar sobre una muestra el detalle completo haciendo uso del componente detalleReparacion.
+
+- detalleReparacion es un componente que recibe como atributos la descripcion, fecha y categoria da mostrar mediante un parrafo. Debe permitir volver atras con un boton.
+
+- Cada reparacion de permititr mediante botones su edicion, borrado y marcarla como completada.
+
+- Debe mostrarse en todo momento el numero de reparaciones dadas de alta hoy mediante el mensaje "Hoy tenemos X reparaciones nuevas".
+
+- Al cargarse la aplicacion se muestra una pagina con dos enlaces: alta presupuesto, lista presupuestos.

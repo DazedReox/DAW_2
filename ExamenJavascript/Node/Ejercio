@@ -1,0 +1,9 @@
+Creacion de una aplicacion en NodeJS que sirva para la web anterior 
+
+- Asociar una o varias imagenes con nada reparacion. Estas se almacenan en el servidor Node. Deben mostrarse en el componente detalle.
+
+- A cada reparacion se le puede adjuntar documentos PDF que igualmente se maqutan en detalle y pueden descargarse. 
+
+- La aplicacion debe informar a los clientes del numero de tecnicos conectados al servidor en cada momento. Esta informacion se debe mostrar en todo momento en el cliente.
+
+- En caso de haber varios tecnicos conectados, debe ser posible intercambiar mensajes de un modo privado y en tiempo real entre ellos.
