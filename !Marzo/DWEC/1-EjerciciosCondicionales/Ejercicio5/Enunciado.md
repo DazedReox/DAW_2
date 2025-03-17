@@ -1,0 +1,1 @@
+Crear un programa que le pida al usuario primero un número al usuario a través de un prompt y luego un segundo número para luego mostrar en un alerta el número mayor, esta vez realizar el ejercicio ocupando un if ternario.

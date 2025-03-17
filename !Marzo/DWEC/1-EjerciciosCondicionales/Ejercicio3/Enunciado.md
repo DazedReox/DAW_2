@@ -1,0 +1,1 @@
+Crear un programa que determine si un número introducido en un prompt es divisible por 11 y 5 o no, mostrar el resultado con console.log
