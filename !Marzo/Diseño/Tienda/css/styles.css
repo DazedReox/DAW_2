@@ -1,17 +1,92 @@
-/* Error: $description: Unknown color space "tertiary".
- *   ,
- * 9 |     background-color: color(tertiary);
- *   |                       ^^^^^^^^^^^^^^^
- *   '
- *   scss\styles.scss 9:23  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: $description: Unknown color space "tertiary".\a   \2577 \a 9 \2502      background-color: color(tertiary);\d\a   \2502                        ^^^^^^^^^^^^^^^\a   \2575 \a   scss\\styles.scss 9:23  root stylesheet';
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(0rem, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  grid-row-gap: 1.6rem;
+  background-color: #f2f0f1;
+}
+
+.header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) repeat(7, minmax(min-content, 16rem)) minmax(10rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  grid-gap: 2rem;
+}
+
+.nav-top-right {
+  grid-column: 6/-1;
+  grid-row: 1/2;
+}
+.nav-top-right .top-right-links {
+  font-size: medium;
+  font-family: "Josefin Sans", sans-serif;
+}
+.nav-top-right .top-right-links li {
+  text-decoration: none;
+  display: inline;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.nav-top-right .top-right-links li a {
+  text-decoration: none;
+  color: black;
+}
+.nav-top-right .top-right-links li img {
+  margin-top: 1rem;
+  padding-top: 0.25rem;
+  padding-left: 0.25rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 1rem;
+}
+.logo-img {
+  width: 10rem;
+  height: 100%;
+}
+
+/*
+@use '../variables';
+
+.nav-top-right{
+    grid-column: 6 / -1;
+    grid-row: 1 / 2;
+
+
+    .top-right-links{   
+        font-size: medium;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        flex-direction: row;
+        li{
+            text-decoration: none;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            a{
+                text-decoration: none;
+                color:black;
+            }
+        }    
+    }
+}
+**/
+
+/*# sourceMappingURL=styles.css.map */

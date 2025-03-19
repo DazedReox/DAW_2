@@ -1,26 +1,28 @@
-@use "index";
-/*
-@use '../variables';
-
 .nav-top-right{
     grid-column: 6 / -1;
     grid-row: 1 / 2;
 
     
-    .top-right-links{   
+    .top-right-links{
         font-size: medium;
         font-family: 'Josefin Sans', sans-serif;
-        display: flex;
-        flex-direction: row;
         li{
             text-decoration: none;
+            display: inline;
             padding-left: 3rem;
             padding-right: 3rem;
+            
             a{
                 text-decoration: none;
-                color:black;
+                color: black;
+            }
+            img{
+                margin-top: 1rem;
+                padding-top: 0.25rem;
+                padding-left: 0.25rem;
+                height: 2rem;
+                width: 2rem;
             }
         }    
     }
 }
-**/
