@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>Unidad 2 - Relación 1</title>
+  </head>
+  
+  <h3>Unidad 2 - Relación 1</h3>
+
+  <body>
+    <ol>
+      
+      <li><b>tipos</b><br>
+          Crear tres variables: país, habitantes y continente a los que les darás un valor.<br>
+          A continuación, muestra su valor por pantalla junto con el tipo de dato que tiene cada una de ellas.
+      </li><br>
+      
+      <li><b>printf - round</b><br>
+          Escribe un programa que calcule la longitud, la superficie y el volumen de una esfera dado el radio.<br>
+          Se pide que el resultado, en todos los casos, solo con dos decimales.<br>
+          Ilustra las diferencias entre usar la función round() y la función printf().<br>
+          Para obtener el valor de pi existe una función de PHP.
+      </li><br>
+      
+      <li><b>ecuación segundo grado</b><br>
+          Escribe un programa que resuelva una ecuación de segundo grado.<br>
+          Aprovecha para ilustrar la diferencia entre echo, print y printf.<br>
+          Recuerda que aún no sabemos cómo recoger valores desde el teclado.
+      </li><br>
+      
+      <li><b>conversor dólar</b><br>
+          Realiza un conversor de euros a dólares.
+      </li><br>
+
+      <li><b>fechas suma y resta</b><br>
+          Dado que una fecha se guarda en formato de tiempo, o se puede convertir a dicho formato en caso de que sea una cadena, parece lógico pensar que se puede añadir o restar tiempo a las fechas. Es así, aunque no es tan fácil como sumar o restar directamente una cierta cantidad de días a la fecha base.<br>
+          En este ejercicio se  pide que averigües cómo se puede sumar o restar una cantidad de tiempo a una fecha y que apliques ese conocimiento para mostrar por pantalla la fecha de hoy, la de ayer y la de mañana.<br>
+          Para poder resolver el ejercicio tienes que investigar las funciones date() y strtotime()<br>
+          La función strtotime(), en principio, sirve para convertir una variable de tipo string a otra de tipo fecha, pero la propia función permite realizar operaciones de suma o resta de cantidades de tiempo para obtener una fecha distinta. Ten en cuenta que, para sumar o restar a la fecha, deberás convertirla a formato tiempo, pero para mostrarla por pantalla necesitarás volverla a convertir a formato cadena.<br>
+          Ejemplo:<br>
+          <ul>
+            <li>strtotime(fecha1) la convertiría en una variable de tipo fecha, pero la fecha seguiría siendo la misma;</li>
+            <li>strtotime(+1year, fecha1) la convierte en un valor de tipo fecha, pero sumándole un año;</li>
+            <li>strtotime(-2month, fecha1) la convierte en un valor de tipo fecha, pero restándole dos meses.
+          </ul>
+      </li><br>
+
+      <li><b>cadena al revés</b><br>
+          Dada una variable que contenga una cadena de varios caracteres, escribe un script que nos permita escribir esa cadena al revés (empezando desde la última letra y acabando en la primera) sin hacer uso de la función strrev(). Para solucionarlo tienes que tener en cuenta que existen funciones que permiten extraer el carácter que ocupa una posición determinada de una cadena. Por otro lado,  tienes que trabajar con estructuras iterativas, para recorrer las distintas posiciones que tiene una cadena. Eso sí, necesitamos conocer su longitud, pero para eso también tenemos funciones de cadena.<br>
+          Ten en cuenta que si hay caracteres especiales, como eñes o letras con tilde, ocupan más de un byte y no se mostrarán adecuadamente. Busca la función adecuada e cadenas de caracteres que debes usar.
+      </li><br>
+
+      <li><b>pirámide</b><br>
+          Escribe un programa que pinte por pantalla una pirámide rellena a base de asteriscos.
+          La base de la pirámide debe estar formada por 9 asteriscos.
+          El resultado debe de ser algo parecido a esto:<br>
+          <br>
+          <img src="images/piramide.png" alt="Pirámide" width="700"><br>
+          <br>
+          Puedes utilizar la entidad de caracter "non breaking space" &nbsp; para separar las palabras de tu menú de navegación tanto como quieras. (Recuerda que debes usar tantos &nbsp; como espacios en blanco quieras incluir ya que si pones los espacios en blanco directamente el navegador los agrupará como si fuese uno solo).
+      </li><br>
+
+      <li><b>pirámide hueca</b><br>
+          Modifica el ejercicio anterior para que la pirámide sea hueca y tenga este aspecto:<br>
+          <br>
+          <img src="images/piramide-hueca.png" alt="Pirámide" width="700"><br>
+      </li>
+
+      <li><b>nombres de números</b><br>
+          Escribe un programa que muestre en pantalla los nombres en inglés de los diez primeros números naturales y su correspondiente traducción al castellano.<br>
+          Las palabras deben de estar distribuidas en dos columnas. (Uso de la etiqueta <code>&lt;table&gt;</code> de HTML).
+      </li><br>
+
+      <li><b>pares</b><br>
+          Escribe un script que muestre por pantalla todos los números pares del 1 al 100
+      </li><br>
+
+    </ol>
+  </body>
+
+</html>
