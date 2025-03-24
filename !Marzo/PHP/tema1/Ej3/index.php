@@ -21,15 +21,24 @@
             $x1 = (-$b + sqrt($discriminante)) / (2 * $a);
             $x2 = (-$b - sqrt($discriminante)) / (2 * $a);
 
-            echo "\nCon echo:\n";
-            echo "Sol 1: " . $x1 . "\n";
-            echo "Sol 2: " . $x2 . "\n";
+            echo "<br>";
+            echo "Con echo: ";
+            echo "<br>";
+            echo "Sol 1: " . $x1;
+            echo "<br>";
+            echo "Sol 2: " . $x2;
+            echo "<br>";
 
-            print("\nCon print:\n");
-            print("Sol 1: " . $x1 . "\n");
-            print("Sol 2: " . $x2 . "\n");
+            echo "<br>";
+            print("Con print: ");
+            echo "<br>";
+            print("Sol 1: " . $x1);
+            echo "<br>";
+            print("Sol 2: " . $x2);
+            echo "<br>";
 
-            printf("\nCon printf:\n");
+            echo "<br>";
+            printf("Con printf: ");
             printf("Sol 1: %.2f\n", $x1);
             printf("Sol 2: %.2f\n", $x2);
         }
