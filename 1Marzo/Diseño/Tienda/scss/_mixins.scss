@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+@mixin navigation(){
+    &-list{ 
+        font-size:large;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &-item{
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    &-link{
+        text-decoration: none;
+        color: black;
+    }
+    &-link:hover{
+        color:#edaf3d;
+        text-decoration: underline;
+    }
+}

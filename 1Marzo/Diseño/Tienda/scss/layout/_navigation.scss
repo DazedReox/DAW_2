@@ -1,28 +1,42 @@
+@use "../mixins.scss" as *;
+@use "../variables" as *;
+
 .nav-top-right{
     grid-column: 6 / -1;
     grid-row: 1 / 2;
 
-    
-    .top-right-links{
-        font-size: medium;
-        font-family: 'Josefin Sans', sans-serif;
-        li{
-            text-decoration: none;
-            display: inline;
-            padding-left: 3rem;
-            padding-right: 3rem;
-            
-            a{
-                text-decoration: none;
-                color: black;
-            }
-            img{
-                margin-top: 1rem;
-                padding-top: 0.25rem;
-                padding-left: 0.25rem;
-                height: 2rem;
-                width: 2rem;
-            }
-        }    
+    @include navigation();
+    @include response(lg){
+        grid-column: 5 / -2;
     }
-}
+
+    @include response(md){
+        grid-column: 4 / -2;
+    }
+
+    @include response(sm){
+        grid-column: 2 / -2;
+    }
+
+    /*&-list{
+        font-size:large;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &-item{
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    &-link{
+        text-decoration: none;
+        color: black;
+    }
+    &-link:hover{
+        color:#edaf3d;
+        text-decoration: underline;
+    }*/
+}    
