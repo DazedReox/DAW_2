@@ -6,13 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+<?php
         $altura = 5;
 
         for ($i = 1; $i <= $altura; $i++) {
-            echo str_repeat(" ", $altura - $i);
+            echo str_repeat("&nbsp;", $altura - $i);
             echo str_repeat("*", 2 * $i - 1);            
-            echo "\n";
+            echo "<br>";
         }
     ?>
 </body>
