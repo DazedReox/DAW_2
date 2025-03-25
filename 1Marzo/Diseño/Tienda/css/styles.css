@@ -1,20 +1,169 @@
-/* Error: Undefined mixin.
- *    ,
- * 9  | /     @include response(lg){
- * 10 | |         grid-column: 5 / -2;
- * 11 | \     }
- *    '
- *   scss\layout\_navigation.scss 9:5  @forward
- *   scss\index.scss 7:1               @use
- *   scss\styles.scss 1:1              root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 9  \2502  \250c      @include response(lg){\a 10 \2502  \2502          grid-column: 5 / -2;\a 11 \2502  \2514      }\a    \2575 \a   scss\\layout\\_navigation.scss 9:5  @forward\a   scss\\index.scss 7:1               @use\a   scss\\styles.scss 1:1              root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(0rem, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  grid-row-gap: 1.6rem;
+  background-color: #f2f0f1;
+}
+
+.header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) repeat(7, minmax(min-content, 16rem)) minmax(10rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  grid-gap: 2rem;
+}
+
+.nav-top-right {
+  grid-column: 6/-2;
+  grid-row: 1/2;
+}
+.nav-top-right-list {
+  font-size: large;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+}
+.nav-top-right-item {
+  text-decoration: none;
+  list-style-type: none;
+}
+.nav-top-right-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  transition: all 0.5s;
+}
+@media (max-width: 576px) {
+  .nav-top-right-link {
+    font-size: xs;
+  }
+}
+.nav-top-right-link:hover {
+  color: #999999;
+  text-decoration: underline;
+}
+@media (max-width: 992px) {
+  .nav-top-right {
+    grid-column: 5/-2;
+  }
+}
+@media (max-width: 768px) {
+  .nav-top-right {
+    grid-column: 4/-2;
+  }
+}
+@media (max-width: 576px) {
+  .nav-top-right {
+    grid-column: 2/-1;
+  }
+}
+
+/*&-list{
+        font-size:large;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &-item{
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    &-link{
+        text-decoration: none;
+        color: black;
+    }
+    &-link:hover{
+        color:#edaf3d;
+        text-decoration: underline;
+    }*/
+.nav-mid {
+  display: grid;
+  grid-column: 2/6;
+  grid-row: 2/5;
+}
+.nav-mid-tittle {
+  grid-column: 5/6;
+  font-size: large;
+}
+.nav-mid-bottom {
+  grid-column: 3/6;
+  text-decoration: none;
+}
+.nav-mid-bottom-list {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.nav-mid-bottom-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 1rem;
+}
+.logo-img {
+  width: 10rem;
+  height: 100%;
+}
+
+/*
+@use '../variables';
+
+.nav-top-right{
+    grid-column: 6 / -1;
+    grid-row: 1 / 2;
+
+
+    .top-right-links{   
+        font-size: medium;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        flex-direction: row;
+        li{
+            text-decoration: none;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            a{
+                text-decoration: none;
+                color:black;
+            }
+        }    
+    }
+}
+**/
+
+/*# sourceMappingURL=styles.css.map */

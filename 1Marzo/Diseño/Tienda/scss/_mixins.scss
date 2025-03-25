@@ -1,12 +1,18 @@
 @use "./variables" as *;
 
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0){
+    display: flex;
+    flex-flow: $direction wrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
 @mixin navigation(){
     &-list{ 
         font-size:large;
         font-family: 'Josefin Sans', sans-serif;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flex(row, space-around);
     }
 
     &-item{
@@ -16,10 +22,31 @@
 
     &-link{
         text-decoration: none;
-        color: black;
+        color: color(primary);
+        font-size: size(sm);
+        @include response(sm){
+            font-size: (xs);
+        }
+        transition: all .5s;
     }
     &-link:hover{
-        color:#edaf3d;
+        color:lighten(color(primary), 40%);
         text-decoration: underline;
+    }
+}
+
+$sizes: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+@mixin response($breakpoint){
+    @if map-has-key($sizes, $breakpoint){
+        @media (max-width: map-get($sizes, $breakpoint)){
+        @content;
+        }
     }
 }

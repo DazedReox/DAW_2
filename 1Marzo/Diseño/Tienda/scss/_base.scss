@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 * {
     margin: 0;
@@ -9,6 +10,13 @@
 
 html{
     font-size: 62.5%;
+    @include response(md){
+        font-size: 56.25%;
+    }
+
+    @include response(sm){
+        font-size: 50%;
+    }
 }
 
 .container {
@@ -19,21 +27,3 @@ html{
     background-color: color(tertiary);
 }
 
-.nav-mid{
-    display: grid;
-    grid-column: 4 / 7;
-    grid-row: 2 / 7;
-
-    li{
-        grid-column: 3 / 7;
-        text-decoration: none;
-        display: inline;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        
-        a{
-            text-decoration: none;
-            color: black;
-        }
-    }
-}
