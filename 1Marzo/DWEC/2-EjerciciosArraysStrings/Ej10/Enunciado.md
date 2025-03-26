@@ -1,0 +1,1 @@
+Crear una función que reciba un array con números y devuelva un nuevo arreglo con solo los números pares, hint: utilizar reduce()

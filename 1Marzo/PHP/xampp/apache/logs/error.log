@@ -8,3 +8,17 @@
 [Mon Mar 24 09:51:35.823800 2025] [ssl:warn] [pid 4972:tid 468] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Mon Mar 24 09:51:35.871791 2025] [mpm_winnt:notice] [pid 4972:tid 468] AH00354: Child: Starting 150 worker threads.
 [Mon Mar 24 10:01:29.617564 2025] [php:error] [pid 4972:tid 1892] [client 127.0.0.1:59814] PHP Fatal error:  Uncaught ArgumentCountError: str_repeat() expects exactly 2 arguments, 3 given in C:\\Users\\reox\\Desktop\\DAW_2\\1Marzo\\PHP\\xampp\\htdocs\\tema1\\Ej7\\index.php:13\nStack trace:\n#0 C:\\Users\\reox\\Desktop\\DAW_2\\1Marzo\\PHP\\xampp\\htdocs\\tema1\\Ej7\\index.php(13): str_repeat('&nbsp;', '&nbsp;', 4)\n#1 {main}\n  thrown in C:\\Users\\reox\\Desktop\\DAW_2\\1Marzo\\PHP\\xampp\\htdocs\\tema1\\Ej7\\index.php on line 13
+[Wed Mar 26 09:11:47.511674 2025] [ssl:warn] [pid 392:tid 440] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Mar 26 09:11:47.574254 2025] [core:warn] [pid 392:tid 440] AH00098: pid file C:/Users/reox/Desktop/DAW_2/1Marzo/PHP/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+Failed loading C:/Escritorio/DAW_2/1Marzo/PHP/xampp/php/ext/php_xdebug.dll
+.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Mar 26 09:11:48.028942 2025] [mpm_winnt:notice] [pid 392:tid 440] AH00455: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 configured -- resuming normal operations
+[Wed Mar 26 09:11:48.028942 2025] [mpm_winnt:notice] [pid 392:tid 440] AH00456: Apache Lounge VS17 Server built: Oct 18 2023 13:03:18
+[Wed Mar 26 09:11:48.028942 2025] [core:notice] [pid 392:tid 440] AH00094: Command line: 'c:\\users\\reox\\desktop\\daw_2\\1marzo\\php\\xampp\\apache\\bin\\httpd.exe -d C:/Users/reox/Desktop/DAW_2/1Marzo/PHP/xampp/apache'
+[Wed Mar 26 09:11:48.044561 2025] [mpm_winnt:notice] [pid 392:tid 440] AH00418: Parent: Created child process 8772
+[Wed Mar 26 09:11:48.508161 2025] [ssl:warn] [pid 8772:tid 440] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+Failed loading C:/Escritorio/DAW_2/1Marzo/PHP/xampp/php/ext/php_xdebug.dll
+w.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Mar 26 09:11:48.608462 2025] [mpm_winnt:notice] [pid 8772:tid 440] AH00354: Child: Starting 150 worker threads.
+[Wed Mar 26 09:11:55.249486 2025] [php:warn] [pid 8772:tid 1920] [client 127.0.0.1:63953] PHP Warning:  Undefined variable $num in C:\\Users\\reox\\Desktop\\DAW_2\\1Marzo\\PHP\\xampp\\htdocs\\tema1\\Ej13\\index.php on line 17
+[Wed Mar 26 09:11:55.249486 2025] [php:warn] [pid 8772:tid 1920] [client 127.0.0.1:63953] PHP Warning:  foreach() argument must be of type array|object, null given in C:\\Users\\reox\\Desktop\\DAW_2\\1Marzo\\PHP\\xampp\\htdocs\\tema1\\Ej13\\index.php on line 17

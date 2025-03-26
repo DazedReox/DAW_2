@@ -1,0 +1,1 @@
+Escribir el cuadrado de los primeros 40 numeros naturales usando el bucle while

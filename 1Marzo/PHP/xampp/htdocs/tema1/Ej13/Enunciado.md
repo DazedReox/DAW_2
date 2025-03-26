@@ -1,0 +1,1 @@
+Imprimir por pantalla todas las tablas de multiplicar de 1 a 10 dentro de una tabla HTML
