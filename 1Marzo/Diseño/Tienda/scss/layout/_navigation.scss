@@ -57,17 +57,22 @@
     &-bottom{
         grid-column: 3 / 6;
         text-decoration: none;
-        
+         
         &-list{
             text-decoration: none;
             list-style-type: none;
             display: flex;
             flex-direction: row;
+            
         }
 
         &-link{
+            
             text-decoration: none;
             color: color(primary);
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
+        
     }
 }

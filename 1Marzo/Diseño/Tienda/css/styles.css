@@ -128,6 +128,54 @@ html {
 .nav-mid-bottom-link {
   text-decoration: none;
   color: #333;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.slideshow {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+@media (max-width: 992px) {
+  .slideshow {
+    height: 60vh;
+  }
+}
+@media (max-width: 768px) {
+  .slideshow {
+    height: 50vh;
+  }
+}
+.slideshow-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+}
+.slideshow-slide img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.slideshow-content {
+  background-color: lightgrey;
+  position: absolute;
+  bottom: 6rem;
+  left: 6rem;
+  max-width: 40rem;
+  padding: 5rem;
+}
+@media (max-width: 992px) {
+  .slideshow-content {
+    padding: 2rem;
+  }
+}
+.slideshow-content h2 {
+  color: #333;
 }
 
 .logo {
