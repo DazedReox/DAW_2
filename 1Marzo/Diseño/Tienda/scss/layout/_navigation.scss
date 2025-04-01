@@ -55,15 +55,16 @@
     }
 
     &-bottom{
-        grid-column: 3 / 6;
+        grid-column: 4 / 6;
         text-decoration: none;
+        
          
         &-list{
             text-decoration: none;
             list-style-type: none;
             display: flex;
             flex-direction: row;
-            
+            font-size:large;
         }
 
         &-link{

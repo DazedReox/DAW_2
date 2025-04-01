@@ -27,6 +27,9 @@
         left: 0;
         width: inherit;
         height: inherit;
+        visibility: hidden;
+        opacity: 0;
+        animation: slideshow 20s linear infinite;
     
     img{
         width: inherit;
@@ -50,5 +53,66 @@
             font-size: size(lx);
             color: color(primary);
         }
+    }
+}
+/*
+.slideshow-slide:nth-child(1){
+    animation-delay: 0s;
+}
+.slideshow-slide:nth-child(2){
+    animation-delay: 4s;
+}
+.slideshow-slide:nth-child(3){
+    animation-delay: 8s;
+}
+.slideshow-slide:nth-child(4){
+    animation-delay: 12s;
+}
+.slideshow-slide:nth-child(5){
+    animation-delay: 16s;
+}
+*/
+$animlist: 1 0s, 2 4s, 3 8s, 4 12s, 5 18s;
+
+@each $item in $animlist {
+    .slideshow-slide:nth-child(#{nth($item, 1)}){
+        animation-delay: nth($item, 2);
+    }
+}
+/*
+$animap: (
+    1: 0s,
+    2: 4s,
+    3: 8s,
+    4: 12s,
+    5: 16s
+);
+
+@each $key, $value in $animap {
+    .slideshow-slide:nth(#{key}){
+        animation-delay: $value;
+    }
+}*/
+
+@keyframes slideshow{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    2%{
+        visibility: visible;
+        opacity: 1;
+    }
+    18%{
+        visibility: visible;
+        opacity: 1;
+    }
+    20%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
     }
 }
