@@ -1,0 +1,1 @@
+Crear una función que reciba un array con palabras, crear un nuevo arreglo que contenga solo las palabras que empiezan con una vocal.
