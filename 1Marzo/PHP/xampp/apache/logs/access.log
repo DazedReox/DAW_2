@@ -26,3 +26,4 @@
 127.0.0.1 - - [26/Mar/2025:09:13:09 +0100] "GET /tema1/Ej13/index.php HTTP/1.1" 200 3616 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
 127.0.0.1 - - [26/Mar/2025:09:13:09 +0100] "GET /favicon.ico HTTP/1.1" 200 30894 "http://localhost/tema1/Ej13/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
 127.0.0.1 - - [26/Mar/2025:09:14:22 +0100] "GET /tema1/Ej13/index.php HTTP/1.1" 200 3616 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [07/Apr/2025:09:15:19 +0200] "GET /ejemplo.php HTTP/1.1" 200 665

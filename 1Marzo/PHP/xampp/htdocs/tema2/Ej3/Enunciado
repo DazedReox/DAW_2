@@ -1,0 +1,6 @@
+A partir de un nombre, un verbo, un adjetivo y un
+adverbio, crea una historia que contenga dichos elementos. Por ejemplo:
+• Entrada: perro / caminar / azul / rápidamente
+• Salida: ¿ Te gusta caminar con tu perro azul rápidamente ?
+
+Crea un madlib más extenso, leyendo más datos de entrada.
