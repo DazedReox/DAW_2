@@ -1,0 +1,3 @@
+Sin hacer uso de condiciones que utilicen dentro la condición los
+operadores lógicos, muestra el mayor de tres números (a, b y c).
+209mayor3c.php: Utiliza en las condiciones los operadores lógicos.

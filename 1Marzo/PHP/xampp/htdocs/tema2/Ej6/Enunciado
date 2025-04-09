@@ -1,0 +1,3 @@
+Escribe un programa que funcione similar a un reloj, de manera que a partir
+de los valores de hora, minuto y segundo muestre la hora dentro de un segundo. Tras
+las 23:59:59 serán las 0:0:0.

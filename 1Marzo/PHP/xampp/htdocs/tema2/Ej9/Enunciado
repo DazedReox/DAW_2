@@ -1,0 +1,2 @@
+Escribe un programa que sume los números del 1 al 10.
+221sumaAB.php: A partir del anterior, refactorizar para que funcione con inicio y fin.
