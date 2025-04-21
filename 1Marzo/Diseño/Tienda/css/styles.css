@@ -36,6 +36,9 @@ html {
   grid-template-rows: repeat(3, min-content);
   grid-gap: 2rem;
 }
+.header .nav-mid-tittle {
+  padding-bottom: 50px;
+}
 
 .nav-top-right {
   grid-column: 6/-2;
@@ -172,6 +175,7 @@ html {
   left: 6rem;
   max-width: 40rem;
   padding: 5rem;
+  font-size: large;
 }
 @media (max-width: 992px) {
   .slideshow-content {
@@ -274,7 +278,10 @@ $animap: (
   grid-row: 2/3;
 }
 .productos-ropa img {
-  size: auto;
+  margin-left: 10px;
+  width: 500px;
+  height: 665px;
+  object-fit: cover;
 }
 .productos-ropa-texto {
   background-color: black;
@@ -292,6 +299,18 @@ $animap: (
   background-color: orange;
   text-align: center;
 }
+.productos-vermas {
+  grid-column: 6/7;
+  font-size: large;
+}
+.productos-vermas a {
+  text-decoration: none;
+  color: black;
+}
+.productos-vermas a:hover {
+  color: #f5b149;
+  text-decoration: underline;
+}
 .productos .productos-ropa:nth-child(1) {
   grid-column: 2/4;
   grid-row: 2/3;
@@ -301,8 +320,46 @@ $animap: (
   grid-row: 2/3;
 }
 .productos .productos-ropa:nth-child(3) {
-  grid-column: 8/-2;
+  grid-column: 7/-2;
   grid-row: 2/3;
+}
+
+.footer {
+  grid-column: 1/-1;
+  grid-row: 4/-1;
+  background-color: #f5b149;
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) repeat(7, minmax(min-content, 16rem)) minmax(10rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  grid-gap: 2rem;
+}
+.footer-informacion {
+  grid-column: 1/3;
+  font-size: large;
+  padding-left: 10px;
+}
+.footer-informacion p {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.footer-sub {
+  grid-column: 4/7;
+  font-size: large;
+}
+.footer-sub p {
+  padding-top: 10px;
+}
+.footer-sub .sub-datos {
+  padding-top: 20px;
+}
+.footer-masInfo {
+  grid-column: 8/-1;
+  font-size: large;
+  padding-right: 10px;
+}
+.footer-masInfo p {
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 .logo {

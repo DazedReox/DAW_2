@@ -44,6 +44,7 @@
         left: 6rem;
         max-width: 40rem;
         padding: 5rem;
+        font-size: large;
 
         @include response(lg){
             padding: 2rem;

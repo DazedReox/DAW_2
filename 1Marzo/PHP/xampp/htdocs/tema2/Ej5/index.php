@@ -1,21 +1,37 @@
 <?php
-$a = 15;
-$b = 42;
-$c = 31;
+$a = 10;
+$b = 20;
+$c = 15;
 
-$mayor = $a;
-
-if ($a > $b && $a > $c) {
-    $mayor = $a;
+if ($a >= $b) {
+    if ($a >= $c) {
+        echo "El mayor es: $a";
+    } else {
+        echo "El mayor es: $c";
+    }
+} else {
+    if ($b >= $c) {
+        echo "El mayor es: $b";
+    } else {
+        echo "El mayor es: $c";
+    }
 }
-
-if ($b > $a && $b > $c) {
-    $mayor = $b;
-}
-
-if ($c > $a && $c > $b) {
-    $mayor = $c;
-}
-
-echo "El mayor número es: $mayor";
 ?>
+
+<?php
+//con operadores logicos
+$a = 10;
+$b = 20;
+$c = 15;
+
+echo "<br>";
+
+if ($a >= $b && $a >= $c) {
+    echo "El mayor es: $a";
+} elseif ($b >= $a && $b >= $c) {
+    echo "El mayor es: $b";
+} else {
+    echo "El mayor es: $c";
+}
+?>
+
