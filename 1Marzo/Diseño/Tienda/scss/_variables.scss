@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+/// paleta colores
+/// @group colores
 $colors: (
     primary: #333,
     secondary: #ffe,
@@ -7,6 +9,11 @@ $colors: (
     quaternary: #f5b149,
 );
 
+///Funcion que devuelve un color delo vector colores
+///@group colores
+///@param {string} $color-name -- nombre color de lvector colores
+///@return {color}
+///@example background-color: color(primary); 
 @function color ($color-name){
     @return map-get($colors, $color-name);
 }

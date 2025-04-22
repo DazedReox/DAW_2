@@ -18,10 +18,11 @@
         font-size: size(lx);
         color: color(quaternary);
     }
-        
+
     &-ropa{   
         grid-column: 1 / -1;
         grid-row: 2 / 3;
+        position: relative;
         img{
             margin-left: 10px;
             width: 500px;
@@ -29,10 +30,15 @@
             object-fit: cover;
         }
         &-texto{
+            visibility: hidden;
+            visibility: visible;
             background-color: black;
             opacity: 0.75;
-            height: 125px;
-            width: 125px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: inherit;
+            width: inherit;
             color: white;
             text-align: center;
             padding-top: 33px;
@@ -44,8 +50,34 @@
                 background-color: orange;
                 text-align: center;  
             }
-        } 
+        }
     }
+
+    /*&-ropa:hover{
+        .productos-ropa-texto{
+            visibility: visible;
+            background-color: black;
+            opacity: 0.75;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: inherit;
+            width: inherit;
+            color: white;
+            text-align: center;
+            padding-top: 33px;
+            
+            a{
+                color: white;
+                font-size: medium;
+                border-color: white;
+                background-color: orange;
+                text-align: center;  
+            }
+        }
+    }*/
+
+     
     &-vermas{
         grid-column: 6 / 7;
         font-size:large;
@@ -58,11 +90,11 @@
             text-decoration: underline;
         }
     }
-    .productos-ropa:nth-child(1){
+    .productos-ropa:nth-child(2){
         grid-column: 2 / 4;
         grid-row: 2 / 3;
     }
-    .productos-ropa:nth-child(2){
+    .productos-ropa:nth-child(1){
         grid-column: 5 / 7;
         grid-row: 2 / 3;
     }
