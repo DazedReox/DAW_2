@@ -31,9 +31,7 @@ $profesores = [
             echo "Registro: " . $profesor["registro"] . "<br>";
         }
     }
-    
     mostrarRegistros($profesores);
-    
 ?>
 
 <?php 
@@ -52,7 +50,7 @@ $profesores = [
         return strtotime($profesor["nacimiento"]) >= strtotime("1990-01-01");
     });
     
-    echo "<h3>Profesores nacidos a partir de 1990:</h3>";
+    echo "<h3>Profesores que han nacido a partir de 1990:</h3>";
     foreach ($profesores1990 as $p) {
         echo $p["nombre"] . " " . $p["apellidos"] . " - Nacido el " . $p["nacimiento"] . "<br>";
     }    

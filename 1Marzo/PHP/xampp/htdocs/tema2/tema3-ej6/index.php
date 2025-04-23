@@ -12,14 +12,14 @@ function mcd($a, $b) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calcular MCD</title>
+    <title>Calcular mcd</title>
 </head>
 <body>
-    <h2>Calculadora de MCD (Máximo Común Divisor)</h2>
+    <h2>Calculadora de mcd</h2>
     <form method="post">
-        Número 1: <input type="number" name="num1" required><br><br>
-        Número 2: <input type="number" name="num2" required><br><br>
-        <input type="submit" value="Calcular MCD">
+        Numero 1: <input type="number" name="num1" required><br><br>
+        Numero 2: <input type="number" name="num2" required><br><br>
+        <input type="submit" value="Calcular mcd">
     </form>
 
     <?php

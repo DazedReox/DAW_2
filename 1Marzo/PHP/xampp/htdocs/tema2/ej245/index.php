@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } elseif (isset($_GET["cantidad"]) && is_numeric($_GET["cantidad"])) {
     $cantidad = intval($_GET["cantidad"]);
     if ($cantidad <= 0) {
-        echo "Cantidad inválida.";
+        echo "Cantidad no valida.";
         exit;
     }
 
@@ -51,6 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<input type='submit' value='Generar Tiquet'>";
     echo "</form>";
 } else {
-    echo "No se han obtenido datos para hacer el ejercicio. Ejemplo: <code>?cantidad=3</code>";
+    echo "No se han obtenido datos para poder hacer el ejercicio. Ejemplo: <code>?cantidad=3</code>";
 }
 ?>
