@@ -30,3 +30,22 @@
 127.0.0.1 - - [09/Apr/2025:08:47:16 +0200] "GET /PHP/tema2/Ej5/index.php HTTP/1.1" 404 296
 127.0.0.1 - - [09/Apr/2025:08:47:29 +0200] "GET /tema2/Ej5/index.php HTTP/1.1" 200 34
 127.0.0.1 - - [09/Apr/2025:08:47:47 +0200] "GET /tema2/Ej5/index.php HTTP/1.1" 200 38
+127.0.0.1 - - [23/Apr/2025:08:35:32 +0200] "GET /tema2/Ej245/index.php HTTP/1.1" 200 83 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:35:32 +0200] "GET /favicon.ico HTTP/1.1" 200 30894 "http://localhost/tema2/Ej245/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:35:43 +0200] "GET /tema2/Ej245/index.php?cantidad=3 HTTP/1.1" 200 574 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:36:03 +0200] "POST /tema2/Ej245/index.php?cantidad=3 HTTP/1.1" 200 447 "http://localhost/tema2/Ej245/index.php?cantidad=3" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:36:12 +0200] "GET /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 260 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:36:15 +0200] "GET /tema2/Ej245/index.php?cantidad=7 HTTP/1.1" 200 1202 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:36:20 +0200] "GET /tema2/Ej245/index.php?cantidad=0 HTTP/1.1" 200 19 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:36:24 +0200] "GET /tema2/Ej245/index.php?cantidad=-1 HTTP/1.1" 200 19 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:36:42 +0200] "GET /tema2/tema4-ej8/index.php HTTP/1.1" 200 282 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:37:17 +0200] "GET /tema2/tema3-ej6/index.php HTTP/1.1" 200 400 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:37:31 +0200] "POST /tema2/tema3-ej6/index.php HTTP/1.1" 200 431 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:37:39 +0200] "POST /tema2/tema3-ej6/index.php HTTP/1.1" 200 430 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:37:48 +0200] "POST /tema2/tema3-ej6/index.php HTTP/1.1" 200 432 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:39:57 +0200] "POST /tema2/tema3-ej6/index.php HTTP/1.1" 200 432 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:39:57 +0200] "GET /favicon.ico HTTP/1.1" 200 30894 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:40:05 +0200] "POST /tema2/tema3-ej6/index.php HTTP/1.1" 200 431 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:40:05 +0200] "GET /favicon.ico HTTP/1.1" 200 30894 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:40:20 +0200] "GET /tema2/tema3-ej6/index.php HTTP/1.1" 200 400 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [23/Apr/2025:08:40:20 +0200] "GET /favicon.ico HTTP/1.1" 200 30894 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"

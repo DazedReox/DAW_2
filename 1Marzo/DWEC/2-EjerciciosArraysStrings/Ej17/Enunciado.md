@@ -1,0 +1,1 @@
+17.Devolver la suma de todos los elementos en la diagonal de la matriz.
