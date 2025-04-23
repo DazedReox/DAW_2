@@ -1,9 +1,9 @@
 <?php
 function mcd($a, $b) {
     while ($b != 0) {
-        $temp = $b;
+        $x = $b;
         $b = $a % $b;
-        $a = $temp;
+        $a = $x;
     }
     return $a;
 }
