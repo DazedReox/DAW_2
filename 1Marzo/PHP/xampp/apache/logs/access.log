@@ -49,3 +49,54 @@
 127.0.0.1 - - [23/Apr/2025:08:40:05 +0200] "GET /favicon.ico HTTP/1.1" 200 30894 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
 127.0.0.1 - - [23/Apr/2025:08:40:20 +0200] "GET /tema2/tema3-ej6/index.php HTTP/1.1" 200 400 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
 127.0.0.1 - - [23/Apr/2025:08:40:20 +0200] "GET /favicon.ico HTTP/1.1" 200 30894 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:51:45 +0200] "GET /tema2/tema3-ej6/ HTTP/1.1" 200 373 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:51:54 +0200] "GET /tema2/tema4-ej8/ HTTP/1.1" 200 289 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:52:08 +0200] "GET /tema2/Ej245/ HTTP/1.1" 200 89 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:54:08 +0200] "POST /tema2/tema3-ej6/index.php HTTP/1.1" 200 404 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:54:15 +0200] "POST /tema2/tema3-ej6/index.php HTTP/1.1" 200 405 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:54:27 +0200] "POST /tema2/tema3-ej6/index.php HTTP/1.1" 200 402 "http://localhost/tema2/tema3-ej6/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:54:42 +0200] "GET /tema2/Ej245/index.php?cantidad=3 HTTP/1.1" 200 574 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:55:01 +0200] "POST /tema2/Ej245/index.php?cantidad=3 HTTP/1.1" 200 457 "http://localhost/tema2/Ej245/index.php?cantidad=3" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:55:05 +0200] "GET /tema2/Ej245/index.php?cantidad=5 HTTP/1.1" 200 888 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:55:08 +0200] "GET /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 260 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:09:55:22 +0200] "POST /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 312 "http://localhost/tema2/Ej245/index.php?cantidad=1" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [28/Apr/2025:16:07:57 +0200] "GET /tema2/Ej245/index.php HTTP/1.1" 200 89
+127.0.0.1 - - [28/Apr/2025:16:09:11 +0200] "GET /tema2/Ej245/index.php?cantidad=2 HTTP/1.1" 200 417
+127.0.0.1 - - [28/Apr/2025:16:09:23 +0200] "POST /tema2/Ej245/index.php?cantidad=2 HTTP/1.1" 200 387
+127.0.0.1 - - [28/Apr/2025:16:09:32 +0200] "GET /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 260
+127.0.0.1 - - [28/Apr/2025:16:09:49 +0200] "POST /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 310
+127.0.0.1 - - [28/Apr/2025:16:10:07 +0200] "POST /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 310
+127.0.0.1 - - [28/Apr/2025:16:10:10 +0200] "GET /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 260
+127.0.0.1 - - [28/Apr/2025:16:10:45 +0200] "POST /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 308
+127.0.0.1 - - [28/Apr/2025:16:10:58 +0200] "GET /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 260
+127.0.0.1 - - [28/Apr/2025:16:11:09 +0200] "POST /tema2/Ej245/index.php?cantidad=1 HTTP/1.1" 200 306
+127.0.0.1 - - [30/Apr/2025:09:23:50 +0200] "GET /ej230.php HTTP/1.1" 404 295 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:24:01 +0200] "GET /ejer230.php HTTP/1.1" 200 226 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:24:19 +0200] "GET /ejer230.php HTTP/1.1" 200 226 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:24:45 +0200] "GET /ejer230.php HTTP/1.1" 200 226 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:25:22 +0200] "GET /ejer230.php HTTP/1.1" 200 196 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:25:48 +0200] "GET /ejer230.php HTTP/1.1" 200 196 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:26:26 +0200] "GET /ejer230.php HTTP/1.1" 200 196 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:26:47 +0200] "GET /ejer230.php HTTP/1.1" 200 836 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:27:03 +0200] "GET /ejer230.php HTTP/1.1" 200 834 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:29:54 +0200] "GET /ejer230.php HTTP/1.1" 200 196 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:30:07 +0200] "GET /ejer230.php HTTP/1.1" 200 1123 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:30:34 +0200] "GET /ejer230.php HTTP/1.1" 200 861 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:30:53 +0200] "GET /ejer230.php HTTP/1.1" 200 857 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:31:02 +0200] "GET /ejer230.php HTTP/1.1" 200 853 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:31:30 +0200] "GET /ejer230.php HTTP/1.1" 200 872 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:32:14 +0200] "GET /ejer230.php HTTP/1.1" 200 8418 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:32:34 +0200] "GET /ejer230.php HTTP/1.1" 200 8409 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:33:48 +0200] "GET /ejer230.php HTTP/1.1" 200 8413 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:35:05 +0200] "GET /ejer230.php HTTP/1.1" 200 8411 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:35:59 +0200] "GET /ejer230.php HTTP/1.1" 200 8412 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:38:41 +0200] "GET /ejer230.php HTTP/1.1" 200 8414 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:38:42 +0200] "GET /ejer230.php HTTP/1.1" 200 8415 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:38:43 +0200] "GET /ejer230.php HTTP/1.1" 200 8420 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:38:43 +0200] "GET /ejer230.php HTTP/1.1" 200 8415 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:38:44 +0200] "GET /ejer230.php HTTP/1.1" 200 8415 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:38:44 +0200] "GET /ejer230.php HTTP/1.1" 200 8415 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:38:45 +0200] "GET /ejer230.php HTTP/1.1" 200 8411 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:38:45 +0200] "GET /ejer230.php HTTP/1.1" 200 8419 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:40:35 +0200] "GET /ejer230.php HTTP/1.1" 200 8414 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
+127.0.0.1 - - [30/Apr/2025:09:43:07 +0200] "GET /ejer230.php HTTP/1.1" 200 8415 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
