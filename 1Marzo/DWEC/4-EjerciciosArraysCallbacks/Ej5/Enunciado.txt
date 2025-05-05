@@ -1,0 +1,25 @@
+5.-Escribe una función llamada diferenciaMayorMenor que recibe un array y debe devolver la edad del menor,
+del mayor y la diferencia. (Debes usar el método map). Como ejemplo, la siguiente entrada devolvería  [13, 67, 54]
+
+     const input = [
+        {
+          name: 'John',
+          age: 13
+        },
+        {
+          name: 'Mark',
+          age: 56,
+        },
+        {
+          name: 'Rachel',
+          age: 45,
+        },
+        {
+          name: 'Nate',
+          age: 67,
+        },
+        {
+          name: 'Jeniffer',
+          age: 65,
+        }
+      ];

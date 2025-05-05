@@ -1,0 +1,2 @@
+3.-Escribe una función llamada calculaMedia que reciba un array de números y 
+la media aritmética de ellos. (Debes usar el método reduce)

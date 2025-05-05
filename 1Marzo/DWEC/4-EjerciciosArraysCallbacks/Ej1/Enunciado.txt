@@ -1,0 +1,2 @@
+1.-Escribe una función llamada arraySquared que reciba un array de números y calcule
+el cuadrado de cada uno de ellos. (Debes usar el método map)
