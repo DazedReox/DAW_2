@@ -1,0 +1,2 @@
+2.-Crear una función que calcule el promedio dentro de un array pero dentro de un rango, esta función recibe el array ,
+un punto de partida y uno de termino y devuelve el promedio de los valores dentro del rango especificado.
