@@ -1,0 +1,2 @@
+4.-Escribe una función llamada iniciales que recibe una cadena con un nombre y apellidos 
+(separados por espacio) y devuelve las iniciales. (Debes usar el método map)
