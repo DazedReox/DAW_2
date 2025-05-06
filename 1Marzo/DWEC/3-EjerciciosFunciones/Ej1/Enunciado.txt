@@ -1,0 +1,1 @@
+1.-Crear una función que devuelva el promedio de un array , en caso de que el array esté vacío debe devolver cero.
