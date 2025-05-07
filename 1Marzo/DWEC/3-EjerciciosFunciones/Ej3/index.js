@@ -80,6 +80,13 @@ function getPercentage(number, percentage){
  *  getRandomColorSequence(["red", "blue", "green"], 4) // returns ['blue', 'red', 'red', 'green']
  */
 
+function getRandomColorSequence(string, number){
+    
+    const colores = [];
+
+    return 
+}
+
 /**
  * @name getRockPaperScissor
  * @description Devuelve una jugada aleatoria de piedra, papel o tijera
