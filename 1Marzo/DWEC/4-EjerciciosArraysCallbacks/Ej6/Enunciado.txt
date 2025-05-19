@@ -1,0 +1,4 @@
+6.-Haciendo uso del método filter escribe las siguientes funciones que reciben cada una un array de números:
+
+    igualesMayoresCinco: Devuelve un array con los mayores o iguales a cinco
+    soloPares: Devuelve un array con solo los pares.
