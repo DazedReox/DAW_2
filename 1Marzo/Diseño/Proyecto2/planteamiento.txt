@@ -1,0 +1,20 @@
+header horizontal con logo a la izq y enlaces medio-derecha
+imagen con slide y pasador y con el saber mas 
+breve introduccion al sitio, ubicacion, estilo, platos
+
+Enlaces:
+1.- enlace platos/comidas
+2.- reservas
+3.- pedidos a domicilio
+4.- sobre nosotros 
+
+Body:
+1.- texto izq foto derecha
+2.- texto derecha foto izq
+3.- contenedores con resumenes de los enlaces
+
+Footer: 
+1.- Aplicaciones para trabajar
+2.- Contacto
+3.- tlf
+4.- correo
