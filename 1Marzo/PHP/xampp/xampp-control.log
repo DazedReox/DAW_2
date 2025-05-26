@@ -1,0 +1,40 @@
+22:56:02  [main] 	Initializing Control Panel
+22:56:02  [main] 	Windows Version:  Enterprise  64-bit
+22:56:02  [main] 	XAMPP Version: 8.2.12
+22:56:02  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+22:56:02  [main] 	You are not running with administrator rights! This will work for
+22:56:02  [main] 	most application stuff but whenever you do something with services
+22:56:02  [main] 	there will be a security dialogue or things will break! So think 
+22:56:02  [main] 	about running this application with administrator rights!
+22:56:02  [main] 	XAMPP Installation Directory: "c:\users\reox\desktop\daw_2\daw_2\1marzo\php\xampp\"
+22:56:02  [main] 	Checking for prerequisites
+22:56:04  [main] 	All prerequisites found
+22:56:04  [main] 	Initializing Modules
+22:56:04  [main] 	Starting Check-Timer
+22:56:04  [main] 	Control Panel Ready
+22:56:07  [Apache] 	Attempting to start Apache app...
+22:56:13  [Apache] 	Attempting to start Apache app...
+22:56:13  [Apache] 	Status change detected: running
+22:56:14  [Apache] 	Status change detected: stopped
+22:56:14  [Apache] 	Error: Apache shutdown unexpectedly.
+22:56:14  [Apache] 	This may be due to a blocked port, missing dependencies, 
+22:56:14  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+22:56:14  [Apache] 	Press the Logs button to view error logs and check
+22:56:14  [Apache] 	the Windows Event Viewer for more clues
+22:56:14  [Apache] 	If you need more help, copy and post this
+22:56:14  [Apache] 	entire log window on the forums
+22:56:16  [mysql] 	Attempting to start MySQL app...
+22:56:19  [mysql] 	Attempting to start MySQL app...
+22:56:21  [Apache] 	Attempting to start Apache app...
+22:56:21  [Apache] 	Status change detected: running
+22:56:22  [Apache] 	Status change detected: stopped
+22:56:22  [Apache] 	Error: Apache shutdown unexpectedly.
+22:56:22  [Apache] 	This may be due to a blocked port, missing dependencies, 
+22:56:22  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+22:56:22  [Apache] 	Press the Logs button to view error logs and check
+22:56:22  [Apache] 	the Windows Event Viewer for more clues
+22:56:22  [Apache] 	If you need more help, copy and post this
+22:56:22  [Apache] 	entire log window on the forums
+22:56:51  [main] 	Deinitializing Modules
+22:56:51  [main] 	Deinitializing Control Panel
+
