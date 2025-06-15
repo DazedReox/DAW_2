@@ -6,7 +6,7 @@ const Play = () => {
   const [message, setMessage] = useState('');
 
   const getRandomPokemon = async () => {
-    const id = Math.floor(Math.random() * 151) + 1; // Gen 1
+    const id = Math.floor(Math.random() * 151) + 1;
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await res.json();
     setPokemon(data);
