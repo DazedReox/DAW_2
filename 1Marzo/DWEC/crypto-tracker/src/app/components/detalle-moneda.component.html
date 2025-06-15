@@ -1,0 +1,15 @@
+<div *ngIf="moneda">
+  <h2>{{ moneda.name }} ({{ moneda.symbol.toUpperCase() }})</h2>
+  <img [src]="moneda.image.large" width="50" />
+  <p [innerHTML]="getDescripcion()"></p>
+
+  <p><strong>Precio actual:</strong> €{{ moneda.market_data.current_price.eur }}</p>
+  <p><strong>Fecha de inicio:</strong> {{ moneda.genesis_date || 'Desconocida' }}</p>
+
+  <div *ngIf="moneda.links">
+    <a *ngIf="moneda.links.homepage[0]" [href]="moneda.links.homepage[0]" target="_blank">Web</a> |
+    <a *ngIf="moneda.links.repos_url.github[0]" [href]="moneda.links.repos_url.github[0]" target="_blank">GitHub</a>
+  </div>
+
+  <button routerLink="/portfolio">Volver</button>
+</div>

@@ -1,0 +1,32 @@
+<table *ngIf="monedas.length > 0">
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Símbolo</th>
+      <th>Precio (€)</th>
+      <th>Capitalización</th>
+      <th>Volumen</th>
+      <th>Máx 24h</th>
+      <th>Mín 24h</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let m of monedas">
+      <td><img [src]="m.image" width="20" /></td>
+      <td>{{ m.name }}</td>
+      <td>{{ m.symbol | uppercase }}</td>
+      <td>{{ m.current_price | number: '1.2-2' }}</td>
+      <td>{{ m.market_cap | number }}</td>
+      <td>{{ m.total_volume | number }}</td>
+      <td>{{ m.high_24h | number }}</td>
+      <td>{{ m.low_24h | number }}</td>
+      <td>
+        <button (click)="verDetalle(m.id)">Detalles</button>
+        <button (click)="eliminar(m.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p *ngIf="monedas.length === 0">No hay monedas seleccionadas.</p>

@@ -1,7 +1,7 @@
 <template>
-  <RouterView />
+  <Common />
 </template>
 
 <script setup>
-import { RouterView } from 'vue-router'
+import Common from './components/Common.vue'
 </script>

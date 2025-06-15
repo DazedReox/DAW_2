@@ -1,38 +1,38 @@
 <template>
-  <div>
-    <Navbar />
-    <div class="pt-20 px-4 max-w-4xl mx-auto">
-      <component :is="currentPage" />
-    </div>
-  </div>
+  <component :is="currentPage" />
 </template>
 
 <script setup>
 import { computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { auth, db, provider } from '../firebase'
 import { signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 import { collection, query, where, getDocs, doc, getDoc } from 'firebase/firestore'
-
-import Navbar from '../components/Common.vue'
 import PropertyCard from '../components/PropertyCard.vue'
 import PropertyForm from '../components/PropertyForm.vue'
 
-const props = defineProps(['page', 'id'])
+const route = useRoute()
 
 const currentPage = computed(() => {
-  switch (props.page) {
-    case 'home': return Home
-    case 'offers': return Offers
-    case 'profile': return Profile
-    case 'detail': return PropertyDetails
-    case 'login': return Login
-    case 'register': return Register
-    default: return Home
+  switch (route.name || route.path) {
+    case '/':
+    case 'home':
+      return Home
+    case '/offers':
+      return Offers
+    case '/profile':
+      return Profile
+    case '/login':
+      return Login
+    case '/register':
+      return Register
+    default:
+      if (route.path.startsWith('/property/')) return PropertyDetails
+      return Home
   }
 })
 
-// --- Componentes internos para las vistas ---
+// ---------------- Componentes internos ----------------
 
 const Home = {
   components: { PropertyCard },
@@ -118,7 +118,8 @@ const PropertyDetails = {
     return { prop: null }
   },
   async mounted() {
-    const docRef = doc(db, 'properties', props.id)
+    const id = useRoute().params.id
+    const docRef = doc(db, 'properties', id)
     const snap = await getDoc(docRef)
     this.prop = snap.exists() ? { id: snap.id, ...snap.data() } : null
   }
@@ -126,7 +127,7 @@ const PropertyDetails = {
 
 const Login = {
   template: `
-    <div class="grid gap-2 max-w-sm mx-auto">
+    <div class="grid gap-2 max-w-sm mx-auto mt-4">
       <input v-model="email" placeholder="Email" />
       <input v-model="pass" type="password" placeholder="Contraseña" />
       <button @click="loginEmail">Entrar</button>
@@ -150,7 +151,7 @@ const Login = {
 
 const Register = {
   template: `
-    <div class="grid gap-2 max-w-sm mx-auto">
+    <div class="grid gap-2 max-w-sm mx-auto mt-4">
       <input v-model="email" placeholder="Email" />
       <input v-model="pass" type="password" placeholder="Contraseña" />
       <button @click="register">Registrarse</button>

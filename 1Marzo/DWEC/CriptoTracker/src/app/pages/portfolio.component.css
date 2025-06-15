@@ -1,0 +1,13 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.grid div {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.selected {
+  background-color: #d0f0d0;
+}

@@ -1,0 +1,15 @@
+<h2>Selecciona las criptomonedas que deseas seguir</h2>
+
+<div class="grid">
+  <div *ngFor="let coin of topCoins" (click)="toggleCoin(coin.id)"
+       [class.selected]="portfolioStore.hasCoin(coin.id)">
+    <img [src]="coin.image" width="24" />
+    {{ coin.name }}
+  </div>
+</div>
+
+<app-monedas
+  [monedas]="selectedCoins"
+  (onDetalle)="navigateToDetalle($event)"
+  (onEliminar)="toggleCoin($event)">
+</app-monedas>
