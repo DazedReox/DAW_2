@@ -4,21 +4,10 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, RouterLink } from 'vue-router'
 import { auth, db, provider } from '../firebase'
-import {
-  signInWithPopup,
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-} from 'firebase/auth'
-import {
-  collection,
-  query,
-  where,
-  getDocs,
-  doc,
-  getDoc,
-} from 'firebase/firestore'
+import { signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
+import { collection, query, where, getDocs, doc, getDoc} from 'firebase/firestore'
 import PropertyCard from '../components/PropertyCard.vue'
 import PropertyForm from '../components/PropertyForm.vue'
 
@@ -37,9 +26,8 @@ const currentPage = computed(() => {
   }
 })
 
-
 const Home = {
-  components: { PropertyCard },
+  components: { PropertyCard, RouterLink },
   template: `
     <div>
       <h1 class="text-xl font-bold mb-4">Vivienda en oferta</h1>
@@ -54,10 +42,16 @@ const Home = {
     return { offer: null }
   },
   async mounted() {
-    const q = query(collection(db, 'properties'), where('offer', '==', true))
-    const snap = await getDocs(q)
-    const docs = snap.docs.map(d => ({ id: d.id, ...d.data() }))
-    this.offer = docs[Math.floor(Math.random() * docs.length)]
+    try {
+      const q = query(collection(db, 'properties'), where('offer', '==', true))
+      const snap = await getDocs(q)
+      const docs = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+      if (docs.length > 0) {
+        this.offer = docs[Math.floor(Math.random() * docs.length)]
+      }
+    } catch (error) {
+      console.error('Error al cargar :', error)
+    }
   }
 }
 
@@ -75,9 +69,13 @@ const Offers = {
     return { offers: [] }
   },
   async mounted() {
-    const q = query(collection(db, 'properties'), where('offer', '==', true))
-    const snap = await getDocs(q)
-    this.offers = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+    try {
+      const q = query(collection(db, 'properties'), where('offer', '==', true))
+      const snap = await getDocs(q)
+      this.offers = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+    } catch (error) {
+      console.error('Error al cargar:', error)
+    }
   }
 }
 
@@ -98,8 +96,12 @@ const Profile = {
   },
   methods: {
     async loadMyProps() {
-      const snap = await getDocs(collection(db, 'properties'))
-      this.myProps = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+      try {
+        const snap = await getDocs(collection(db, 'properties'))
+        this.myProps = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+      } catch (error) {
+        console.error('Error al cargar:', error)
+      }
     }
   },
   mounted() {
@@ -117,14 +119,21 @@ const PropertyDetails = {
       <p>Dormitorios: {{ prop.bedrooms }}, Baños: {{ prop.bathrooms }}</p>
       <p v-if="prop.offer">Descuento: {{ prop.discount }}%</p>
     </div>
+    <div v-else>
+      <p>Propiedad no encontrada</p>
+    </div>
   `,
   data() {
     return { prop: null }
   },
   async mounted() {
-    const docRef = doc(db, 'properties', props.id)
-    const snap = await getDoc(docRef)
-    this.prop = snap.exists() ? { id: snap.id, ...snap.data() } : null
+    try {
+      const docRef = doc(db, 'properties', props.id)
+      const snap = await getDoc(docRef)
+      this.prop = snap.exists() ? { id: snap.id, ...snap.data() } : null
+    } catch (error) {
+      console.error('Error al cargar:', error)
+    }
   }
 }
 
@@ -133,8 +142,8 @@ const Login = {
     <div class="grid gap-2 max-w-sm mx-auto mt-4">
       <input v-model="email" placeholder="Email" />
       <input v-model="pass" type="password" placeholder="Contraseña" />
-      <button @click="loginEmail">Entrar</button>
-      <button @click="loginGoogle">Entrar con Google</button>
+      <button @click="loginEmail" class="bg-blue-500 text-white px-4 py-2 rounded">Entrar</button>
+      <button @click="loginGoogle" class="bg-red-500 text-white px-4 py-2 rounded">Entrar con Google</button>
     </div>
   `,
   data() {
@@ -142,12 +151,22 @@ const Login = {
   },
   methods: {
     async loginEmail() {
-      await signInWithEmailAndPassword(auth, this.email, this.pass)
-      router.push('/profile')
+      try {
+        await signInWithEmailAndPassword(auth, this.email, this.pass)
+        router.push('/profile')
+      } catch (error) {
+        console.error('Error login:', error)
+        alert('Error al iniciar sesión')
+      }
     },
     async loginGoogle() {
-      await signInWithPopup(auth, provider)
-      router.push('/profile')
+      try {
+        await signInWithPopup(auth, provider)
+        router.push('/profile')
+      } catch (error) {
+        console.error('Error Google login:', error)
+        alert('Error al iniciar sesión con Google')
+      }
     }
   }
 }
@@ -157,7 +176,7 @@ const Register = {
     <div class="grid gap-2 max-w-sm mx-auto mt-4">
       <input v-model="email" placeholder="Email" />
       <input v-model="pass" type="password" placeholder="Contraseña" />
-      <button @click="register">Registrarse</button>
+      <button @click="register" class="bg-green-500 text-white px-4 py-2 rounded">Registrarse</button>
     </div>
   `,
   data() {
@@ -165,8 +184,13 @@ const Register = {
   },
   methods: {
     async register() {
-      await createUserWithEmailAndPassword(auth, this.email, this.pass)
-      router.push('/profile')
+      try {
+        await createUserWithEmailAndPassword(auth, this.email, this.pass)
+        router.push('/profile')
+      } catch (error) {
+        console.error('Error al registrarse:', error)
+        alert('Error al registrarse')
+      }
     }
   }
 }

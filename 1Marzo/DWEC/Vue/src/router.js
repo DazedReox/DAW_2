@@ -1,13 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Pages from './views/Pages.vue'
+import Home from './views/Home.vue'
+import Offers from './views/Offers.vue'
+import Profile from './views/Profile.vue'
 
 const routes = [
-  { path: '/', component: Pages, props: { page: 'home' } },
-  { path: '/offers', component: Pages, props: { page: 'offers' } },
-  { path: '/profile', component: Pages, props: { page: 'profile' } },
-  { path: '/property/:id', component: Pages, props: route => ({ page: 'detail', id: route.params.id }) },
-  { path: '/login', component: Pages, props: { page: 'login' } },
-  { path: '/register', component: Pages, props: { page: 'register' } },
+  { path: '/', component: Home },
+  { path: '/offers', component: Offers },
+  { path: '/profile', component: Profile },
+  // Mantén Pages.vue solo para las rutas que aún no has separado
+  // { path: '/property/:id', component: Pages, props: route => ({ page: 'detail', id: route.params.id }) },
+  // { path: '/login', component: Pages, props: { page: 'login' } },
+  // { path: '/register', component: Pages, props: { page: 'register' } },
 ]
 
 export default createRouter({

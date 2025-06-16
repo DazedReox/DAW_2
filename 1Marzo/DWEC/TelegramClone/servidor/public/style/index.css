@@ -120,7 +120,9 @@ input[type="text"], input[type="file"] {
 
 #titulo{
     position: fixed;
-    top: 0px;
+    width: 100px;
+    height: 100px;
+    top: 20px;
     left: 20px;
     display: flex;
     align-items: center;
@@ -188,7 +190,8 @@ input[type="text"], input[type="file"] {
 
 #mensajes {
     width: 100%; 
-    max-width: 600px; 
+    max-width: 1200px; 
+    max-height: 700px;
     margin: 0 auto; 
     padding: 0;
     list-style-type: none;

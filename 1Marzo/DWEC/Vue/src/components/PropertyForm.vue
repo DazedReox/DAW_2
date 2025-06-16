@@ -64,10 +64,10 @@ const handleSubmit = async () => {
     return
   }
 
-  if (!form.value.imageUrls.length) {
+  /*if (!form.value.imageUrls.length) {
     alert('Debe subir al menos una imagen.')
     return
-  }
+  }*/
 
   await addDoc(collection(db, 'properties'), form.value)
   emit('submitted')

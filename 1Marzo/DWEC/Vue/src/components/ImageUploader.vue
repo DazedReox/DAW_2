@@ -16,8 +16,6 @@ const uploadImages = async (e) => {
   const urls = []
 
   for (const file of files) {
-    if (!file.type.startsWith('image/')) continue
-
     const filePath = `images/${Date.now()}-${file.name}`
     const fileRef = fbRef(storage, filePath)
 
