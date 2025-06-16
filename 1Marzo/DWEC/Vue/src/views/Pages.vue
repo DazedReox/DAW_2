@@ -4,35 +4,39 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 import { auth, db, provider } from '../firebase'
-import { signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
-import { collection, query, where, getDocs, doc, getDoc } from 'firebase/firestore'
+import {
+  signInWithPopup,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from 'firebase/auth'
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  doc,
+  getDoc,
+} from 'firebase/firestore'
 import PropertyCard from '../components/PropertyCard.vue'
 import PropertyForm from '../components/PropertyForm.vue'
 
-const route = useRoute()
+const props = defineProps(['page', 'id'])
+const router = useRouter()
 
 const currentPage = computed(() => {
-  switch (route.name || route.path) {
-    case '/':
-    case 'home':
-      return Home
-    case '/offers':
-      return Offers
-    case '/profile':
-      return Profile
-    case '/login':
-      return Login
-    case '/register':
-      return Register
-    default:
-      if (route.path.startsWith('/property/')) return PropertyDetails
-      return Home
+  switch (props.page) {
+    case 'home': return Home
+    case 'offers': return Offers
+    case 'profile': return Profile
+    case 'login': return Login
+    case 'register': return Register
+    case 'detail': return PropertyDetails
+    default: return Home
   }
 })
 
-// ---------------- Componentes internos ----------------
 
 const Home = {
   components: { PropertyCard },
@@ -118,8 +122,7 @@ const PropertyDetails = {
     return { prop: null }
   },
   async mounted() {
-    const id = useRoute().params.id
-    const docRef = doc(db, 'properties', id)
+    const docRef = doc(db, 'properties', props.id)
     const snap = await getDoc(docRef)
     this.prop = snap.exists() ? { id: snap.id, ...snap.data() } : null
   }
@@ -140,11 +143,11 @@ const Login = {
   methods: {
     async loginEmail() {
       await signInWithEmailAndPassword(auth, this.email, this.pass)
-      this.$router.push('/profile')
+      router.push('/profile')
     },
     async loginGoogle() {
       await signInWithPopup(auth, provider)
-      this.$router.push('/profile')
+      router.push('/profile')
     }
   }
 }
@@ -163,7 +166,7 @@ const Register = {
   methods: {
     async register() {
       await createUserWithEmailAndPassword(auth, this.email, this.pass)
-      this.$router.push('/profile')
+      router.push('/profile')
     }
   }
 }
