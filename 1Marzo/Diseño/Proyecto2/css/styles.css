@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(0rem, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  grid-row-gap: 1.6rem;
+  background-color: #f2f0f1;
+}
+
+.header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) repeat(7, minmax(min-content, 16rem)) minmax(10rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  grid-gap: 2rem;
+}
+.header .nav-mid-tittle {
+  padding-bottom: 50px;
+}
+
+.navlinks {
+  grid-column: 6/-2;
+  grid-row: 1/2;
+}
+.navlinks-list {
+  font-size: large;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+}
+.navlinks-item {
+  text-decoration: none;
+  list-style-type: none;
+}
+.navlinks-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  transition: all 0.5s;
+}
+@media (max-width: 576px) {
+  .navlinks-link {
+    font-size: xs;
+  }
+}
+.navlinks-link:hover {
+  color: #999999;
+  text-decoration: underline;
+}
+@media (max-width: 992px) {
+  .navlinks {
+    grid-column: 5/-2;
+  }
+}
+@media (max-width: 768px) {
+  .navlinks {
+    grid-column: 4/-2;
+  }
+}
+@media (max-width: 576px) {
+  .navlinks {
+    grid-column: 2/-1;
+  }
+}
+
+.slideshow {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+@media (max-width: 992px) {
+  .slideshow {
+    height: 60vh;
+  }
+}
+@media (max-width: 768px) {
+  .slideshow {
+    height: 50vh;
+  }
+}
+.slideshow-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  visibility: hidden;
+  opacity: 0;
+  animation: slideshow 20s linear infinite;
+}
+.slideshow-slide img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.slideshow-content {
+  background-color: lightgrey;
+  position: absolute;
+  bottom: 6rem;
+  left: 6rem;
+  max-width: 40rem;
+  padding: 5rem;
+  font-size: large;
+}
+@media (max-width: 992px) {
+  .slideshow-content {
+    padding: 2rem;
+  }
+}
+.slideshow-content h2 {
+  color: #333;
+}
+
+.slideshow-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slideshow-slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.slideshow-slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.slideshow-slide:nth-child(4) {
+  animation-delay: 12s;
+}
+
+@keyframes slideshow {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  2% {
+    visibility: visible;
+    opacity: 1;
+  }
+  18% {
+    visibility: visible;
+    opacity: 1;
+  }
+  20% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.footer {
+  grid-column: 1/-1;
+  grid-row: 4/-1;
+  background-color: rgb(78, 203, 78);
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) repeat(7, minmax(min-content, 16rem)) minmax(10rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  grid-gap: 2rem;
+}
+.footer-informacion {
+  grid-column: 1/3;
+  font-size: large;
+  padding-left: 10px;
+}
+.footer-informacion p {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.footer-sub {
+  grid-column: 4/7;
+  font-size: large;
+}
+.footer-sub p {
+  padding-top: 10px;
+}
+.footer-sub .sub-datos {
+  padding-top: 20px;
+}
+.footer-masInfo {
+  grid-column: 8/-1;
+  font-size: large;
+  padding-right: 10px;
+}
+.footer-masInfo p {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.medio {
+  display: flex;
+  grid-column: 1/-1;
+  flex-direction: column;
+  font-size: large;
+  gap: 2rem;
+  width: 100%;
+}
+.medio > div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+.medio > div img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.medio > div h3 {
+  margin: 0 0 0.5rem 0;
+}
+.medio > div p {
+  margin: 0;
+}
+.medio > div div {
+  flex: 1;
+}
+.medio .medio-texto1,
+.medio .medio-texto3,
+.medio medio-texto2 {
+  flex-direction: row;
+}
+
+.logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 1rem;
+}
+.logo-img {
+  width: 10rem;
+  height: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */

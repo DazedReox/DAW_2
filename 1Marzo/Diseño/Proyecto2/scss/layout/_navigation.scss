@@ -1,0 +1,22 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.navlinks{
+    grid-column: 6 / -2;
+    grid-row: 1 / 2;
+
+    @include navigation();
+
+    @include response(lg){
+        grid-column: 5 / -2;
+    }
+
+    @include response(md){
+        grid-column: 4 / -2;
+    }
+
+    @include response(sm){
+        grid-column: 2 / -1;
+    }
+}   

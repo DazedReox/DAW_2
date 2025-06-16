@@ -1,0 +1,44 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.medio {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-direction: column;
+  font-size: large;
+  gap: 2rem;
+  width: 100%; // Asegura que el contenedor ocupe todo el ancho
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%; // Cada fila ocupa todo el ancho
+
+    img {
+      width: 400px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    h3 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    // Aplica a cada bloque de texto
+    div {
+      flex: 1; // Hace que el texto ocupe el espacio restante
+    }
+  }
+
+  .medio-texto1,
+  .medio-texto3,
+  medio-texto2  {
+    flex-direction: row;
+  }
+}

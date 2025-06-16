@@ -1,0 +1,70 @@
+@use "./variables" as *;
+
+
+///mixin para flex direction
+///@group flex
+///@param {string}  $direction [row]
+///@param {string}  $justify [center]
+///@param {string}  $align [center]
+///@param {int}     $gap [0]
+///@example flex($direction: row, $justify: center, $align: center, $gap: 0)
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0){
+    display: flex;
+    flex-flow: $direction wrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+///mixin para la navegacion
+///@group navegacion
+@mixin navigation(){
+    &-list{ 
+        font-size:large;
+        font-family: 'Josefin Sans', sans-serif;
+        @include flex(row, space-around);
+    }
+
+    &-item{
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    &-link{
+        text-decoration: none;
+        color: color(primary);
+        font-size: size(sm);
+        @include response(sm){
+            font-size: (xs);
+        }
+        transition: all .5s;
+    }
+    &-link:hover{
+        color:lighten(color(primary), 40%);
+        text-decoration: underline;
+    }
+}
+
+///mapa para las media queries
+///@group mediaqueries
+$sizes: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+///mixin para media queries
+///@group mediaqueries
+///@param {string} $breakpoint -- valor de la media querie
+///@example @include response(1x){
+///         grid-column: 6 / 10;
+///  }
+@mixin response($breakpoint){
+    @if map-has-key($sizes, $breakpoint){
+        @media (max-width: map-get($sizes, $breakpoint)){
+        @content;
+        }
+    }
+}
