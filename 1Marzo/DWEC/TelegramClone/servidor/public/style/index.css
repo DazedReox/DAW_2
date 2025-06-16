@@ -1,0 +1,332 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ebbe91;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#registration-container {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 450px;
+    margin-bottom: 20px;
+}
+
+#registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1b075e;
+}
+
+#registration-form input {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+#registration-form button {
+    background-color: #25a7d3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#registration-form button:hover {
+    background-color: #12358c;
+}
+
+#mensajes {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+#mensajes li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#mensajes li em {
+    color: #888;
+}
+
+#enviar, #subidaBoton {
+    background-color: #25a4d3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#enviar:hover, #subidaBoton:hover {
+    background-color: #12128c;
+}
+
+input[type="text"], input[type="file"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    bottom: 0px;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #d6a972;
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.notification.show {
+    display: block;
+}
+
+
+#user-info {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#titulo{
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#miFoto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#miNombre {
+    font-weight: bold;
+    color: #3dcf0d;
+}
+#miStatus {
+    color:#888;
+    font-style: italic;
+    
+}
+
+#usuarios {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#lista-usuarios {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-usuarios li {
+    padding: 5px;
+    background-color: #d1d1d1;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+
+#chat-publico {
+    display: none; 
+}
+
+#chat-publico.visible {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mensajes-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    width: 100%;
+}
+
+#mensajes {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 0;
+    list-style-type: none;
+}
+#chat-publico li {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+#chat-publico li img {
+    max-width: 100%;
+    height: auto;
+}
+
+#chat-publico .input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #f0f0f0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+#chat-publico .input-container input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#chat-publico .input-container button {
+    margin-left: 10px;
+}
+
+#inputArchivos {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+
+input[type="file"] {
+    position: relative;
+  }
+  
+  input[type="file"]::file-selector-button {
+    width: 50px;
+    color: transparent;
+  }
+  
+  input[type="file"]::before {
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    left: 16px;
+    height: 20px;
+    width: 20px;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+  }
+  
+  input[type="file"]::after {
+    position: absolute;
+    pointer-events: none;
+    top: 11px;
+    left: 40px;
+    color: #09b04f;
+    content: "";
+  }
+    
+  input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 16px;
+    transition: background-color 200ms;
+  }
+  
+  input[type="file"]::file-selector-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  input[type="file"]::file-selector-button:active {
+    background-color: #e5e7eb;
+  }
+  
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #registration-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #mensajes {
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    #chat-publico {
+        max-width: 100%;
+    }
+
+    #chat-publico .input-container {
+        flex-direction: column;
+    }
+
+    #chat-publico .input-container input[type="text"],
+    #chat-publico .input-container button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #user-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #titulo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #usuarios {
+        padding: 5px;
+    }
+
+    #lista-usuarios li {
+        padding: 5px;
+    }
+}
